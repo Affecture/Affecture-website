@@ -11,6 +11,7 @@ If you need a refresher on some terminology, start [reading here](#glossary).
 - [Astro](https://astro.build/)
 - [Markdown](https://www.markdownguide.org/)
 - [Typescript](https://www.typescriptlang.org/)
+- [Open Graph](https://ogp.me/)
 
 
 ## 💻 Commands
@@ -25,7 +26,7 @@ All commands are executed from the root of the project, from a terminal:
 | `npm run preview`   | Previews the built website at `localhost:4321`   |
 | `npm run astro ...` | Run CLI commands like `astro add`, `astro check` |
 
-## 📂 Directories
+## 📂 Structure
 
 - `/`
   - `public/`: Where assets live
@@ -34,6 +35,7 @@ All commands are executed from the root of the project, from a terminal:
     - `components/`: Self-contained elements with semantic meaning, optionally with slots
     - `layout/`: Combination of components, helpful to reduce repetition
     - `content/`: Pieces of non-code information
+    - `config.mjs`: Global configuration
 
 ## Glossary
 
