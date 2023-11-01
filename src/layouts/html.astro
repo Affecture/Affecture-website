@@ -6,7 +6,7 @@ interface Props extends HTMLAttributes<'body'> {
   title?: string;
 }
 
-const { title, ...bodyAttributes } = Astro.props;
+const { title, class:className, ...bodyAttributes } = Astro.props;
 ---
 
 <html lang="en">
@@ -18,7 +18,7 @@ const { title, ...bodyAttributes } = Astro.props;
     <title>{title || config.title.whenMissing }</title>
     <slot name="htmlHead" />
   </head>
-  <body {...bodyAttributes}>
+  <body class="w-screen min-h-screen" class:list={[className]} {...bodyAttributes}>
     <slot>
       <p>If you see this text, then this layout was used without adding content.</p>
     </slot>
