@@ -13,6 +13,7 @@ If you need a refresher on some terminology, start [reading here](#glossary).
 - [Typescript](https://www.typescriptlang.org/)
 - [Open Graph](https://ogp.me/)
 - [Prettier](https://prettier.io/)
+- [Tailwind](https://tailwindcss.com/)
 
 ## 💻 Commands
 
