@@ -1,3 +1,5 @@
+const isProd = import.meta.env.PROD;
+
 export default {
   title: {
     whenMissing: "affecture",
@@ -7,9 +9,8 @@ export default {
     description:
       "games user research using biosignals and AI to deliver deeper and faster results",
   },
-  url: process.env.CI
-    ? "https://affecture.github.io/Affecture-website/"
-    : "http://localhost:4321",
+  url: isProd ? "https://affecture.github.io" : "http://localhost:4321",
+  base: isProd ? "Affecture-website" : "website",
   social: {
     github: false,
     linkedin: "https://www.linkedin.com/company/affecture/",
