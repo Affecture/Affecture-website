@@ -11,7 +11,7 @@ import Html from "@layouts/html.astro";
 <Html>
   <Navigation />
   <FullScreen
-    class="min-h-fit max-h-[80vh] md:max-h-[30vh] p-2 py-20 md:p-36 text-center flex flex-col gap-12 justify-center"
+    class="mt-12 min-h-fit md:max-h-[80vh] md:min-h-[30vh] p-2 py-20 md:p-36 text-center flex flex-col gap-12 justify-center"
   >
     <p class="max-w-3xl mx-auto text-5xl [text-wrap:balance] leading-relaxed">
       Games user reserach using <i>biosignals</i> and <i>AI</i> to deliver <em
@@ -41,8 +41,10 @@ import Html from "@layouts/html.astro";
       <PersonGallery/>
     </Container>
   </FullWidth>
-  <Container id="contact">
+  <FullScreen id="contact">
+    <Container class="py-8">
     <h1 class="text-4xl text-center md:text-justify">Get in touch!</h1>
     <p>Put form to contact here!</p>
   </Container>
+  </FullScreen>
 </Html>
