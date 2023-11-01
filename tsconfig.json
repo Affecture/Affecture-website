@@ -15,6 +15,11 @@
       "@config": [
         "src/config.mjs"
       ],
-    }
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
   }
 }
