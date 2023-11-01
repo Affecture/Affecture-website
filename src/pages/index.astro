@@ -1,50 +1,42 @@
 ---
+import Container from "@components/containers/container.astro";
+import FullScreen from "@components/containers/fullscreen.astro";
+import FullWidth from "@components/containers/fullwidth.astro";
 import Navigation from "@components/navigation.astro";
 import Html from "@layouts/html.astro";
 ---
 
 <Html>
   <Navigation />
-  <p class="text-3xl mb-8">
-    Ex veniam tempor labore duis do reprehenderit Lorem culpa anim et dolor do.
-    Fugiat mollit qui proident sit id voluptate aliqua excepteur dolore sint.
-    Quis adipisicing ut do ad proident laborum. Id do et commodo reprehenderit
-    ea minim sunt enim elit aute occaecat.
-  </p>
-
-  <p class="text-3xl mb-8">
-    Sit dolore consectetur laborum Lorem aliquip adipisicing do qui officia ex
-    sint exercitation velit. Proident voluptate id et qui commodo velit. Sit
-    dolore aliqua adipisicing quis labore pariatur consectetur fugiat non.
-    Commodo exercitation enim cupidatat nisi eu dolore reprehenderit mollit ad
-    et culpa. Sint in anim aliquip in ullamco cillum laboris anim Lorem veniam
-    voluptate.
-  </p>
-
-  <p class="text-3xl mb-8">
-    Veniam irure Lorem enim deserunt. Dolor adipisicing elit enim laboris culpa
-    ipsum sint ex do ut in aliqua. Irure sunt amet ut ullamco velit. Dolore
-    nulla ea ea qui ex est in est deserunt. Ipsum est velit incididunt eiusmod.
-    Enim laboris et sit exercitation magna reprehenderit laborum duis. Nostrud
-    Lorem adipisicing fugiat Lorem nulla esse.
-  </p>
-
-  <p class="text-3xl mb-8">
-    Quis duis laborum amet exercitation veniam laborum excepteur excepteur
-    cupidatat ullamco occaecat nostrud nostrud dolor. Duis est ad aute excepteur
-    est et. Anim anim irure elit ex commodo et. Ipsum excepteur commodo nulla
-    sunt esse sunt sunt consectetur.
-  </p>
-
-  <p class="text-3xl mb-8">
-    Consequat deserunt incididunt adipisicing officia nostrud. Laboris aute
-    minim fugiat amet nostrud labore veniam ex laboris. Do minim est aliquip
-    cillum. Dolore aute anim consectetur do elit ipsum veniam culpa aliquip
-    cupidatat nostrud deserunt duis.
-  </p>
-
-  <p class="text-3xl mb-8">
-    Eu fugiat laborum non nisi sit esse. Dolor aute nostrud aute sit dolore
-    proident sint magna. Duis ea nulla proident consequat elit eu.
-  </p>
+  <FullScreen
+    class="min-h-fit max-h-[80vh] md:max-h-[30vh] p-2 py-20 md:p-36 text-center flex flex-col gap-12 justify-center"
+  >
+    <p class="max-w-3xl mx-auto text-5xl [text-wrap:balance] leading-relaxed">
+      Games user reserach using <i>biosignals</i> and <i>AI</i> to deliver <em
+        class="text-complementary">deeper</em
+      > and <em class="text-complementary">faster</em> results.
+    </p>
+    <section>
+      <a
+        href="/contact"
+        class="text-3xl text-purple bg-white rounded-lg p-4 inline-block"
+        >Contact us</a
+      >
+      <p class="text-xs text-slate-500">No commitment contact</p>
+    </section>
+  </FullScreen>
+  <Container id="product">
+    <h1 class="text-4xl text-center md:text-justify">What we do</h1>
+    <p>List features and convince people to check product out!</p>
+  </Container>
+  <FullWidth class="bg-gradient-to-br from-purple to-pink" id="about">
+    <Container>
+      <h1 class="text-4xl text-center md:text-justify">About us</h1>
+      <p>Put the pictures of people here</p>
+    </Container>
+  </FullWidth>
+  <Container id="contact">
+    <h1 class="text-4xl text-center md:text-justify">Get in touch!</h1>
+    <p>Put form to contact here!</p>
+  </Container>
 </Html>

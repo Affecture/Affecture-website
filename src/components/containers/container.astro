@@ -1,0 +1,12 @@
+---
+import type { HTMLAttributes } from "astro/types";
+interface Props extends HTMLAttributes<"section"> {}
+
+const { class:className, ...attributes } = Astro.props;
+---
+
+<section class="container mx-auto" class:list={[className]} {...attributes} >
+    <slot>
+      <p>This should be the in the center, with some margins on the side</p>
+    </slot>    
+</section>
