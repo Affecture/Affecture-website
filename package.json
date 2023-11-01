@@ -9,7 +9,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "npm-run-all test:*",
-    "test:types": "astro check"
+    "test:format": "prettier . --check",
+    "test:types": "astro check",
+    "format": "npm-run-all format:*",
+    "format:prettier": "prettier . --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
@@ -18,6 +21,8 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1"
   }
 }

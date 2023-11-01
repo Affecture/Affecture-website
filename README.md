@@ -12,7 +12,7 @@ If you need a refresher on some terminology, start [reading here](#glossary).
 - [Markdown](https://www.markdownguide.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Open Graph](https://ogp.me/)
-
+- [Prettier](https://prettier.io/)
 
 ## 💻 Commands
 
@@ -25,6 +25,7 @@ All commands are executed from the root of the project, from a terminal:
 | `npm run build`     | Builds the production website into `./dist`      |
 | `npm run preview`   | Previews the built website at `localhost:4321`   |
 | `npm run test`      | Runs automated tests suites                      |
+| `npm run format`    | Runs formatting tools                            |
 | `npm run astro ...` | Run CLI commands like `astro add`, `astro check` |
 
 ## 📂 Structure
