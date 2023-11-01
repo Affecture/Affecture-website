@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry } from "astro:content";
+import {Picture} from 'astro:assets';
+
+interface Props {
+    person: CollectionEntry<'person'>;
+}
+const { slug, data, render } = Astro.props.person;
+const { Content } = await render();
+---
+<article class="flex flex-col bg-slate-200 hover:bg-slate-300 transition-all p-8 rounded-3xl">
+    <header class="order-2 text-center p-2">
+        <h1 class="text-3xl font-bold">{data.name}</h1>
+        <h2 class="text-2xl">{data.title}</h2>
+    </header>
+    <section class="order-1">
+        <Picture src={import(`../../assets/person/${slug}.jpeg`)} alt={data.fullName} formats={['avif', 'webp', 'jpeg']}  width={300} class="rounded-full"/>
+    </section>
+    <footer class="order-3 font-light [text-wrap:balance] p-2">
+        <Content/>
+    </footer>
+</article>
+

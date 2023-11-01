@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+import Card from "@components/person/card.astro";
+
+const people = await getCollection('person');
+
+---
+<section class="grid grid-cols-3 gap-4">
+    {people.map(p=><Card person={p}/>)}
+</section>
