@@ -9,7 +9,7 @@ If you need a refresher on some terminology, start [reading here](#glossary).
 ## Technologies used
 
 - [Astro](https://astro.build/)
-- [Markdown](https://www.markdownguide.org/)
+- [Markdown](https://www.markdownguide.org/) & [MDX](https://mdxjs.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Open Graph](https://ogp.me/)
 - [Prettier](https://prettier.io/)

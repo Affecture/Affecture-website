@@ -3,6 +3,7 @@
     "astro-build.astro-vscode",
     "streetsidesoftware.code-spell-checker",
     "yzhang.markdown-all-in-one",
+    "unifiedjs.vscode-mdx",
     "esbenp.prettier-vscode"
   ],
   "unwantedRecommendations": []
