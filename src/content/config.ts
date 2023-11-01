@@ -13,6 +13,7 @@ export const collections = {
     type: "content",
     schema: z.object({
       tagline: z.string(),
+      order: z.number().positive(),
     }),
   }),
 };
