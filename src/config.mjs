@@ -1,5 +1,3 @@
-const isProd = import.meta.env.PROD;
-
 export default {
   title: {
     whenMissing: "affecture",
@@ -9,8 +7,10 @@ export default {
     description:
       "games user research using biosignals and AI to deliver deeper and faster results",
   },
-  url: isProd ? "https://affecture.github.io" : "http://localhost:4321",
-  base: isProd ? "/Affecture-website" : undefined,
+  url: import.meta.env.PROD
+    ? "https://affecture.github.io"
+    : "http://localhost:4321",
+  base: import.meta.env.PROD ? "/Affecture-website" : undefined,
   social: {
     github: false,
     linkedin: "https://www.linkedin.com/company/affecture/",

@@ -1,5 +1,7 @@
 import { defineConfig } from "astro/config";
-import { url, base } from "./src/config.mjs";
+import config from "./src/config.mjs";
+
+const { url, base } = config;
 
 import dynamicImport from "vite-plugin-dynamic-import";
 
@@ -13,6 +15,8 @@ export default defineConfig({
   base: base,
   build: {
     assets: "assets",
+    redirects: false,
+    assetsPrefix: [url, base].join(""),
   },
   vite: {
     plugins: [dynamicImport],
