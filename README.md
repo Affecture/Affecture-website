@@ -24,6 +24,7 @@ All commands are executed from the root of the project, from a terminal:
 | `npm run dev`       | Starts a local dev server at `localhost:4321`    |
 | `npm run build`     | Builds the production website into `./dist`      |
 | `npm run preview`   | Previews the built website at `localhost:4321`   |
+| `npm run test`      | Runs automated tests suites                      |
 | `npm run astro ...` | Run CLI commands like `astro add`, `astro check` |
 
 ## 📂 Structure
