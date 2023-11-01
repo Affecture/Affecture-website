@@ -1,0 +1,17 @@
+---
+import { Picture } from 'astro:assets';
+import logo from "@assets/logo.png";
+import config from '@config';
+---
+<header class="container mx-auto p-8 py-12">
+    <nav class="flex justify-between px-12  self-center">
+        <a href={config.url}>
+            <Picture src={logo} alt="The affecture logo"  width={150}  formats={['avif', 'webp', 'png']} />
+        </a>
+        <ul class="flex gap-24  self-center">
+            <li><a href="/" class="font-light p-2 rounded-lg ring-0 ring-pink hover:ring-1">Home</a></li>
+            <li><a href="/about" class="font-light p-2 rounded-lg ring-0 ring-pink hover:ring-1">About us</a></li>
+            <li><a href="/contact" class="font-light p-2 rounded-lg ring-0 ring-purple hover:ring-1 hover:bg-purple">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
