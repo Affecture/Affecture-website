@@ -48,7 +48,7 @@ All commands are executed from the root of the project, from a terminal:
 - `slot`: An element that can be replaced by content at-will
 - `assets`: Non-code files that are used in the website, like images and fonts.
 
-### Insipration
+## Insipration
 
 Figma sketch:
 https://www.figma.com/file/8nLK2qKlvsmVjPAaF4YqRx/Affecture-first-website?type=design&node-id=0%3A1&mode=design&t=nQ5PMdjz02WEtWlL-1
