@@ -9,4 +9,10 @@ export const collections = {
       title: z.string(),
     }),
   }),
+  feature: defineCollection({
+    type: "content",
+    schema: z.object({
+      tagline: z.string(),
+    }),
+  }),
 };

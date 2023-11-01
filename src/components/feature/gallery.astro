@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+import Card from "@components/feature/card.astro";
+
+const features = await getCollection('feature');
+
+---
+<section class="flex flex-col gap-4 md:gap-12">
+    {features.map(f=><Card feature={f}/>)}
+</section>
