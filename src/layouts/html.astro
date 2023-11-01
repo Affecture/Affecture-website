@@ -18,7 +18,7 @@ const { title, class:className, ...bodyAttributes } = Astro.props;
     <title>{title ? `${title}${config.title.suffix}` : config.title.whenMissing }</title>
     <slot name="htmlHead" />
   </head>
-  <body class="w-screen min-h-screen" class:list={[className]} {...bodyAttributes}>
+  <body class="w-screen min-h-screen bg-slate-900 text-white" class:list={[className]} {...bodyAttributes}>
     <slot>
       <p>If you see this text, then this layout was used without adding content.</p>
     </slot>
