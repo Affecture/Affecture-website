@@ -11,10 +11,11 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: url,
   base: base,
-  assets: "_assets",
-  assetsPrefix: `${url}/${base}`,
+  build: {
+    assets: "assets",
+  },
   vite: {
-    plugins: [dynamicImport()],
+    plugins: [dynamicImport],
   },
   integrations: [mdx(), tailwind()],
 });

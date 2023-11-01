@@ -10,7 +10,7 @@ import Fullwidth from "./containers/fullwidth.astro";
   <Container>
     <header class="p-2 py-4 md:p-8 md:py-12">
       <nav class="flex justify-between px-4 md:px-12 self-center">
-        <a href={config.url} class="hidden md:block">
+        <a href={[config.url, config.base].join("")} class="hidden md:block">
           <Picture
             src={logo}
             alt="The affecture logo"
