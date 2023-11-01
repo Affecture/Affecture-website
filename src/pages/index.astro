@@ -3,6 +3,7 @@ import Container from "@components/containers/container.astro";
 import FullScreen from "@components/containers/fullscreen.astro";
 import FullWidth from "@components/containers/fullwidth.astro";
 import Navigation from "@components/navigation.astro";
+import PersonGallery from "@components/person/gallery.astro";
 import Html from "@layouts/html.astro";
 ---
 
@@ -26,13 +27,16 @@ import Html from "@layouts/html.astro";
     </section>
   </FullScreen>
   <Container id="product">
-    <h1 class="text-4xl text-center md:text-justify">What we do</h1>
-    <p>List features and convince people to check product out!</p>
+    <h1 class="text-4xl text-center md:text-justify mb-8">What we do</h1>
+    <section class="px-8 md:px-20">
+      <p class="text-lg mb-8">Affecture translates physiological data into actionable insights for games user researchers. We are building software that uncovers invisible and unconscious reactions, automatically generating a quantitative emotional and cognitive description of the user experience.</p>
+      <p class="text-lg mb-8">Our novel technology helps user researchers to collect and understand biometric data efficiently, contextualize it, and communicate findings, improving the effectiveness of user research</p>
+    </section>
   </Container>
   <FullWidth class="bg-gradient-to-br from-purple to-pink" id="about">
-    <Container>
-      <h1 class="text-4xl text-center md:text-justify">About us</h1>
-      <p>Put the pictures of people here</p>
+    <Container class="py-8">
+      <h1 class="text-4xl text-center md:text-justify mb-12">About us</h1>
+      <PersonGallery/>
     </Container>
   </FullWidth>
   <Container id="contact">
