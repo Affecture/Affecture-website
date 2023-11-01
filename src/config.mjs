@@ -1,22 +1,15 @@
 export default {
   title: {
-    whenMissing: "Affecture",
-    suffix: "| Affecture",
+    whenMissing: "affecture",
+    suffix: "| affecture",
   },
   seo: {
-    tagline:
-      "Affecture translates physiological data into actionable insights for games user researchers.",
     description:
-      "We are building software that uncovers invisible and unconscious reactions, automatically generating a quantitative emotional and cognitive description of the user experience.",
-    fallbackOGImage: "og-image.png",
+      "games user research using biosignals and AI to deliver deeper and faster results",
   },
   url: "https://some-domain.com",
   social: {
-    facebook: false,
     github: false,
-    instagram: false,
-    mastodon: false,
-    twitter: false,
-    linkedin: false,
+    linkedin: "https://www.linkedin.com/company/affecture/",
   },
 };
