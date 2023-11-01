@@ -4,7 +4,8 @@
     "streetsidesoftware.code-spell-checker",
     "yzhang.markdown-all-in-one",
     "unifiedjs.vscode-mdx",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions"
   ],
   "unwantedRecommendations": []
 }
