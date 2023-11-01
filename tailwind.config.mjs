@@ -7,8 +7,8 @@ export default {
         background: "#010d26",
         purple: "#8508fb",
         pink: "#d026e1",
-        complementary: "#f3d3a0"
-      }
+        complementary: "#f3d3a0",
+      },
     },
   },
   plugins: [],
