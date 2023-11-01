@@ -5,6 +5,7 @@
     "yzhang.markdown-all-in-one",
     "unifiedjs.vscode-mdx",
     "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
     "github.vscode-github-actions"
   ],
   "unwantedRecommendations": []

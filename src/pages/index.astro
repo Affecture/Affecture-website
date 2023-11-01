@@ -1,16 +1,61 @@
 ---
-
+import Container from "@components/containers/container.astro";
+import FullScreen from "@components/containers/fullscreen.astro";
+import FullWidth from "@components/containers/fullwidth.astro";
+import Navigation from "@components/navigation.astro";
+import FeatureGallery from "@components/feature/gallery.astro";
+import PersonGallery from "@components/person/gallery.astro";
+import HighlightText from "@components/typography/highlight.astro";
+import Html from "@layouts/html.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Html>
+  <Navigation />
+  <FullScreen
+    class="mt-12 min-h-fit md:max-h-[80vh] md:min-h-[30vh] p-2 py-20 md:p-36 text-center flex flex-col gap-12 justify-center"
+  >
+    <p class="max-w-3xl mx-auto text-5xl [text-wrap:balance] leading-relaxed">
+      Games user reserach using <i>biosignals</i> and <i>AI</i> to deliver <HighlightText
+      >
+        deeper
+      </HighlightText> and <HighlightText>faster</HighlightText> results.
+    </p>
+    <section>
+      <a
+        href="#contact"
+        class="text-3xl text-purple bg-white rounded-lg p-4 inline-block hover:text-white hover:bg-purple transition-all"
+        >Contact us</a
+      >
+      <p class="text-xs text-slate-500">No commitment contact</p>
+    </section>
+  </FullScreen>
+  <Container id="product" class="mb-12">
+    <h1 class="text-4xl text-center md:text-justify mb-8">What we do</h1>
+    <section class="px-8 md:px-20">
+      <p class="text-lg mb-8">
+        Affecture translates physiological data into actionable insights for
+        games user researchers. We are building software that uncovers invisible
+        and unconscious reactions, automatically generating a quantitative
+        emotional and cognitive description of the user experience.
+      </p>
+      <p class="text-lg mb-8">
+        Our novel technology helps user researchers to collect and understand
+        biometric data efficiently, contextualize it, and communicate findings,
+        improving the effectiveness of user research
+      </p>
+    </section>
+    <FeatureGallery />
+  </Container>
+  <FullWidth class="bg-gradient-to-br from-purple to-pink " id="about">
+    <Container class="py-8">
+      <h1 class="text-4xl text-center md:text-justify mb-12">About us</h1>
+      <PersonGallery />
+    </Container>
+  </FullWidth>
+  <FullWidth id="contact" class="min-h-[30vh]">
+    <Container class="py-8">
+      <h1 class="text-4xl text-center md:text-justify">Get in touch</h1>
+      <p>Put form to contact here!</p>
+    </Container>
+  </FullWidth>
+</Html>
