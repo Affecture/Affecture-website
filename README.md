@@ -31,12 +31,13 @@ All commands are executed from the root of the project, from a terminal:
 ## 📂 Structure
 
 - `/`
-  - `public/`: Where assets live
+  - `public/`: Where non-processed assets live
   - `src/`
-    - `pages/`: Files that create one or more routes
+    - `assets/`: Assets that can be processed or optimized
     - `components/`: Self-contained elements with semantic meaning, optionally with slots
-    - `layout/`: Combination of components, helpful to reduce repetition
     - `content/`: Pieces of non-code information
+    - `layout/`: Combination of components, helpful to reduce repetition
+    - `pages/`: Files that create one or more routes
     - `config.mjs`: Global configuration
 
 ## Glossary
@@ -45,4 +46,4 @@ All commands are executed from the root of the project, from a terminal:
 
 - `route`: a webpage address, like "/blog/my-title" or "/"(index)
 - `slot`: An element that can be replaced by content at-will
-- `assets`: Files that do not need to be pre-processed.
+- `assets`: Non-code files that are used in the website, like images and fonts.
