@@ -6,6 +6,11 @@ This repository hosts the content and the code that make up Affecture's website.
 
 If you need a refresher on some terminology, start [reading here](#glossary).
 
+## 💡 Inspiration
+
+- [Figma sketch](https://www.figma.com/file/8nLK2qKlvsmVjPAaF4YqRx/Affecture-first-website?type=design&node-id=0%3A1&mode=design&t=nQ5PMdjz02WEtWlL-1)
+- [Example website](https://codinginpublic.dev/projects/desgn-landing-page/)
+
 ## Technologies used
 
 - [Astro](https://astro.build/)
@@ -41,7 +46,7 @@ All commands are executed from the root of the project, from a terminal:
     - `pages/`: Files that create one or more routes
     - `config.mjs`: Global configuration
 
-## Glossary
+## 📚 Glossary
 
 ### General terminology
 
