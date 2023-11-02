@@ -1,20 +1,32 @@
 ---
 import { type CollectionEntry } from "astro:content";
-import {Picture} from 'astro:assets';
+import { Picture } from "astro:assets";
 
 interface Props {
-    feature: CollectionEntry<'feature'>;
+  feature: CollectionEntry<"feature">;
 }
 const { slug, data, render } = Astro.props.feature;
 const { Content } = await render();
 ---
-<article class="grid md:grid-cols-2 gap-8 bg-slate-200 bg-opacity-5 p-4 md:p-12 rounded-3xl justify-around group">
-    <header class="md:order-2 md:group-even:order-1 text-center p-2 flex flex-col justify-around">
-        <h1 class="text-3xl font-bold">{data.tagline}</h1>
-        <Content/>
-    </header>
-    <section class="md:order-1 md:group-even:order-2 self-center group-even:translate-x-12 -translate-x-12 ">
-        <Picture src={import(`../../assets/feature/${slug}.png`)} alt={data.tagline} formats={['avif', 'webp', 'jpeg']}  width={1024} class="outline outline-8 outline-white rounded-lg"/>
-    </section>
-</article>
 
+<article
+  class="grid md:grid-cols-2 gap-8 bg-slate-200 bg-opacity-5 p-4 md:p-12 rounded-3xl justify-around group"
+>
+  <header
+    class="md:order-2 md:group-even:order-1 text-center p-2 flex flex-col justify-around"
+  >
+    <h1 class="text-3xl font-bold">{data.tagline}</h1>
+    <Content />
+  </header>
+  <section
+    class="md:order-1 md:group-even:order-2 self-center group-even:translate-x-12 -translate-x-12"
+  >
+    <Picture
+      src={import(`../../assets/feature/${slug}.png`)}
+      alt={data.tagline}
+      formats={["avif", "webp", "jpeg"]}
+      width={1024}
+      class="outline outline-8 outline-white rounded-lg"
+    />
+  </section>
+</article>
