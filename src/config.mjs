@@ -15,4 +15,10 @@ export default {
     github: false,
     linkedin: "https://www.linkedin.com/company/affecture/",
   },
+  contact: {
+    emailjs:{
+      publicKey: "",
+      formTemplate: "",
+    }
+  }
 };
