@@ -1,9 +1,9 @@
 ---
 name: Andreas
 fullName: Andreas Houmølle
-title: Co-Founder
+title: CXO
 ---
 
-Anim esse consequat tempor pariatur.
+Andreas has great communication skills and is the main responsible for forging our relationships with our customers.
 
-Ullamco quis esse cupidatat excepteur.
+Andreas is business focused but has a great eye for design and user experience.

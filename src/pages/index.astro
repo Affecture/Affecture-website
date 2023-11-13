@@ -4,9 +4,10 @@ import FullScreen from "@components/containers/fullscreen.astro";
 import FullWidth from "@components/containers/fullwidth.astro";
 import Navigation from "@components/navigation.astro";
 import FeatureGallery from "@components/feature/gallery.astro";
-import PersonGallery from "@components/person/gallery.astro";
 import HighlightText from "@components/typography/highlight.astro";
 import Html from "@layouts/html.astro";
+import Contact from "@components/contact.astro";
+import OfferingGallery from "@components/offering/gallery.astro";
 ---
 
 <Html>
@@ -15,21 +16,16 @@ import Html from "@layouts/html.astro";
     class="mt-12 min-h-fit md:max-h-[80vh] md:min-h-[30vh] p-2 py-20 md:p-36 text-center flex flex-col gap-12 justify-center"
   >
     <p class="max-w-3xl mx-auto text-5xl [text-wrap:balance] leading-relaxed">
-      Games user research using <i>biosignals</i> and <i>AI</i> to deliver <HighlightText
-      >
-        deeper
-      </HighlightText> and <HighlightText>faster</HighlightText> results.
+      We help designers understand user's <HighlightText>
+        feelings
+      </HighlightText>
     </p>
-    <section>
-      <a
-        href="#contact"
-        class="text-3xl text-purple bg-white rounded-lg p-4 inline-block hover:text-white hover:bg-purple transition-all"
-        >Contact us</a
-      >
-      <p class="text-xs text-slate-500">No commitment contact</p>
-    </section>
+    <p class="max-w-3xl mx-auto text-2xl [text-wrap:balance] leading-relaxed">
+      Affecture offers an outsourcing playtesting solution to verify and improve
+      your video game ideas
+    </p>
   </FullScreen>
-  <Container id="product" class="mb-12">
+  <Container id="features" class="mb-12">
     <h1 class="text-4xl text-center md:text-justify mb-8">What we do</h1>
     <section class="px-8 md:px-20">
       <p class="text-lg mb-8">
@@ -46,16 +42,29 @@ import Html from "@layouts/html.astro";
     </section>
     <FeatureGallery />
   </Container>
-  <FullWidth class="bg-gradient-to-br from-purple to-pink" id="about">
+  <FullWidth class="bg-gradient-to-br from-purple to-pink py-8 md:py-12">
     <Container class="py-8">
-      <h1 class="text-4xl text-center md:text-justify mb-12">About us</h1>
-      <PersonGallery />
+      <h1 class="text-4xl text-center [text-wrap:balance] mb-12">
+        We want to help you. And we are flexible in doing it.
+      </h1>
     </Container>
   </FullWidth>
+  <Container id="features" class="mb-12 py-4">
+    <section class="px-8 md:px-20">
+      <p class="text-lg mb-8">
+        After the goals and audience are defined, you have three options to
+        continue:
+      </p>
+    </section>
+    <OfferingGallery />
+  </Container>
   <FullWidth id="contact" class="min-h-[30vh]">
     <Container class="py-8">
-      <h1 class="text-4xl text-center md:text-justify">Get in touch</h1>
-      <p>Put form to contact here!</p>
+      <h1 class="text-4xl text-center">Get in touch</h1>
+      <h2 class="text-2xl text-center">Want to <HighlightText>know more</HighlightText> or <HighlightText>order our services</HighlightText>?</h2>
+      <section class="py-12 px-8 md:px-20 text-center">
+        <Contact />
+      </section>
     </Container>
   </FullWidth>
 </Html>

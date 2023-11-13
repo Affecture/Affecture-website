@@ -16,4 +16,19 @@ export const collections = {
       order: z.number().positive(),
     }),
   }),
+  virtue: defineCollection({
+    type: "data",
+    schema: z.object({
+      title: z.string(),
+      order: z.number().positive(),
+      details: z.array(z.string()).min(1),
+    })
+  }),
+  offering: defineCollection({
+    type: "content",
+    schema: z.object({
+      title: z.string(),
+      order: z.number().positive(),
+    })
+  })
 };

@@ -1,9 +1,9 @@
 ---
 name: André
 fullName: André Castelli Zacharias
-title: CEO & Co-Founder
+title: CEO
 ---
 
-Aliquip commodo veniam sit commodo deserunt ut.
+André is the face of Affecture and our main representative.
 
-Laboris nisi sunt qui cupidatat ad in Lorem culpa aliqua.
+André is a business savvy individual who also has skills in engineering, machine learning, and cognitive science.

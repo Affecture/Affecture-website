@@ -1,9 +1,9 @@
 ---
 name: Marius
 fullName: Marius Jonika
-title: Co-Founder
+title: CTO
 ---
 
-Est nulla anim Lorem ea labore dolore voluptate sint deserunt.
+Marius is an engineer at heart. With a constant interest in technology, he now specializes in Machine learning and deep learning.
 
-Do aute anim anim qui est qui qui voluptate.
+Marius oversees the development in Affecture.

@@ -10,7 +10,7 @@ import Fullwidth from "./containers/fullwidth.astro";
   <Container>
     <header class="p-2 py-4 md:p-8 md:py-12">
       <nav class="flex justify-between px-4 md:px-12 self-center">
-        <a href={[config.url, config.base].join("")} class="hidden md:block">
+        <a href={[config.url, config.base].join("")} class="hidden sm:block">
           <Picture
             src={logo}
             alt="The affecture logo"
@@ -23,21 +23,21 @@ import Fullwidth from "./containers/fullwidth.astro";
         >
           <li>
             <a
-              href="#product"
+              href={[config.url, config.base].join("")}
               class="font-light p-2 rounded-lg ring-0 ring-pink hover:ring-1"
-              >Product</a
+              >Home</a
             >
           </li>
           <li>
             <a
-              href="#about"
+            href={[config.url, config.base, "/about"].join("")}
               class="font-light p-2 rounded-lg ring-0 ring-pink hover:ring-1"
               >About us</a
             >
           </li>
           <li>
             <a
-              href="#contact"
+            href={[config.url, config.base, "/contact"].join("")}
               class="font-light p-2 rounded-lg ring-0 ring-purple hover:ring-1 hover:bg-purple"
               >Contact us</a
             >
