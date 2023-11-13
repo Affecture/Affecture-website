@@ -8,12 +8,13 @@ const { data, render } = Astro.props.offering;
 const { Content } = await render();
 ---
 
-<article 
-class="flex flex-col bg-slate-200 bg-opacity-5 hover:bg-opacity-20 transition-all p-4 md:p-8 rounded-3xl justify-around min-h-[20em]">
+<article
+  class="flex flex-col bg-slate-200 bg-opacity-5 hover:bg-opacity-20 transition-all p-4 md:p-8 rounded-3xl justify-around min-h-[20em]"
+>
   <header class="text-center p-2">
     <h1 class="text-3xl font-bold">{data.title}</h1>
   </header>
   <section class="self-center px-2 md:px-4">
-  <Content />
+    <Content />
   </section>
 </article>

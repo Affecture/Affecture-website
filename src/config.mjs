@@ -16,9 +16,9 @@ export default {
     linkedin: "https://www.linkedin.com/company/affecture/",
   },
   contact: {
-    emailjs:{
+    emailjs: {
       publicKey: "",
       formTemplate: "",
-    }
-  }
+    },
+  },
 };

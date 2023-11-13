@@ -6,10 +6,9 @@ const offerings = await getCollection("offering");
 ---
 
 <section class="grid md:grid-cols-3 gap-2 md:gap-4 p-2">
-    {
+  {
     offerings
-    .sort((a,b)=>a.data.order - b.data.order)
-    .map((v) => <Item offering={v} />)
-    }
-  </section>
-  
+      .sort((a, b) => a.data.order - b.data.order)
+      .map((v) => <Item offering={v} />)
+  }
+</section>

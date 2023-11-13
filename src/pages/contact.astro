@@ -23,7 +23,11 @@ import config from "@config";
       </p>
     </Container>
     <Container class="basis-3/5">
-      <form id="contact-form" data-publickey={config.contact.emailjs.publicKey} data-template={config.contact.emailjs.formTemplate}>
+      <form
+        id="contact-form"
+        data-publickey={config.contact.emailjs.publicKey}
+        data-template={config.contact.emailjs.formTemplate}
+      >
         <section class="grid sm:grid-cols-2 gap-2 mb-4">
           <section class="flex flex-col gap-2 justify-start">
             <label for="firstName" class="block md:hidden text-xs"
@@ -97,32 +101,44 @@ import config from "@config";
 
             <label for="message" class="block md:hidden text-xs">Message:</label
             >
-            <textarea id="message" placeholder="Message" name="message" rows="3"
-            class="text-purple"
-            ></textarea>
+            <textarea
+              id="message"
+              placeholder="Message"
+              name="message"
+              rows="3"
+              class="text-purple"></textarea>
           </section>
         </section>
         <button type="submit" class="bg-purple w-full p-2">Send</button>
-        <input type="hidden" name="contact_number">
+        <input type="hidden" name="contact_number" />
       </form>
       <script type="text/javascript">
-        window.onload = function() {
-            const form = document.getElementById('contact-form');
-            // Setup hooks for sending manually
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('default_service', form.dataset.template, '#contact-form', form.dataset.publickey)
-                    .then(function() {
-                        console.log('Email sent succesfully!');
-                    }, function(error) {
-                        console.log('Email failed to send...', error);
-                    });
-            });
-        }
-    </script>
+        window.onload = function () {
+          const form = document.getElementById("contact-form");
+          // Setup hooks for sending manually
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs
+              .sendForm(
+                "default_service",
+                form.dataset.template,
+                "#contact-form",
+                form.dataset.publickey,
+              )
+              .then(
+                function () {
+                  console.log("Email sent succesfully!");
+                },
+                function (error) {
+                  console.log("Email failed to send...", error);
+                },
+              );
+          });
+        };
+      </script>
     </Container>
   </Fullscreen>
 </Html>
