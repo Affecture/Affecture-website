@@ -1,13 +1,11 @@
 import { defineConfig } from "astro/config";
 import config from "./src/config.mjs";
-
 const { url } = config;
-
 import dynamicImport from "vite-plugin-dynamic-import";
-
 import mdx from "@astrojs/mdx";
-
 import tailwind from "@astrojs/tailwind";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,5 +18,5 @@ export default defineConfig({
   vite: {
     plugins: [dynamicImport],
   },
-  integrations: [mdx(), tailwind()],
+  integrations: [mdx(), tailwind(), partytown()],
 });
