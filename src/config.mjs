@@ -7,9 +7,7 @@ export default {
     description:
       "games user research using biosignals and AI to deliver deeper and faster results",
   },
-  url: import.meta.env.PROD
-    ? "https://affecture.com"
-    : "http://localhost:4321",
+  url: import.meta.env.PROD ? "https://affecture.com" : "http://localhost:4321",
   base: import.meta.env.PROD ? "/Affecture-website" : undefined,
   social: {
     github: false,
