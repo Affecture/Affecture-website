@@ -162,6 +162,7 @@ import Highlight from "@components/typography/highlight.astro";
             element.classList.contains("hidden")
           ) {
             element.classList.remove("hidden");
+            element.focus({ preventScroll: false, focusVisible: true });
           }
         }
 
