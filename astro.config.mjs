@@ -5,8 +5,6 @@ import dynamicImport from "vite-plugin-dynamic-import";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 
-import partytown from "@astrojs/partytown";
-
 // https://astro.build/config
 export default defineConfig({
   site: url,
@@ -18,5 +16,5 @@ export default defineConfig({
   vite: {
     plugins: [dynamicImport],
   },
-  integrations: [mdx(), tailwind(), partytown()],
+  integrations: [mdx(), tailwind()],
 });
