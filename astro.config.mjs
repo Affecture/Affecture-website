@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import config from "./src/config.mjs";
 
-const { url, base } = config;
+const { url } = config;
 
 import dynamicImport from "vite-plugin-dynamic-import";
 
@@ -12,11 +12,10 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: url,
-  base: base,
   build: {
     assets: "assets",
     redirects: false,
-    assetsPrefix: [url, base].join(""),
+    assetsPrefix: url,
   },
   vite: {
     plugins: [dynamicImport],

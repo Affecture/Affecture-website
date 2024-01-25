@@ -5,7 +5,7 @@ interface Props extends HTMLAttributes<"body"> {
   title?: string;
 }
 
-const baseUrl = [config.url, config.base].join("");
+const baseUrl = config.url;
 const { title, class: className, ...bodyAttributes } = Astro.props;
 ---
 
