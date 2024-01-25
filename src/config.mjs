@@ -14,8 +14,8 @@ export default {
   },
   contact: {
     emailjs: {
-      publicKey: "",
-      formTemplate: "",
+      publicKey: "BUcm18z1_1-YvcVsq",
+      formTemplate: "template_wp9lial",
     },
   },
 };
