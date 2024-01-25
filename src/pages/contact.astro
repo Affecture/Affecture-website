@@ -146,19 +146,27 @@ import Highlight from "@components/typography/highlight.astro";
         }
 
         function hide(element) {
-          if (element && element.classList && !element.classList.contains('hidden')) {
-            element.classList.add('hidden');
+          if (
+            element &&
+            element.classList &&
+            !element.classList.contains("hidden")
+          ) {
+            element.classList.add("hidden");
           }
         }
 
         function show(element) {
-          if (element && element.classList && element.classList.contains('hidden')) {
-            element.classList.remove('hidden');
+          if (
+            element &&
+            element.classList &&
+            element.classList.contains("hidden")
+          ) {
+            element.classList.remove("hidden");
           }
         }
 
         window.onload = function () {
-          const form = document.getElementById("contact-form");          
+          const form = document.getElementById("contact-form");
 
           // Setup hooks for sending manually
           form.addEventListener("submit", function (event) {
@@ -179,7 +187,7 @@ import Highlight from "@components/typography/highlight.astro";
                   console.log("Email sent succesfully!");
                   show(document.getElementById("success-modal"));
                   setTimeout(function () {
-                    hide(document.getElementById("success-modal"))
+                    hide(document.getElementById("success-modal"));
                   }, 3000);
                 },
                 function (error) {
