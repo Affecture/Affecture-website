@@ -5,10 +5,11 @@ import Item from "@components/virtue/item.astro";
 const virtue = await getCollection("virtue");
 ---
 
-<section class="flex flex-col gap-4 md:gap-12 p-2">
+<p class="flex flex-col gap-4 md:gap-12 p-2">
   {
     virtue
       .sort((a, b) => a.data.order - b.data.order)
       .map((v) => <Item virtue={v} />)
   }
 </section>
+
