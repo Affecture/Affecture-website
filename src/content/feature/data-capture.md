@@ -1,7 +1,8 @@
 ---
-tagline: What we measure 
+tagline: What we measure
 order: 1
 ---
+
 <h1 style="font-size: 2.5em;">What we measure</h1>
 
 <div class="section" style="margin-bottom: 10px;">

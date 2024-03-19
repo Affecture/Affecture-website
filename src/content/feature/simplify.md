@@ -5,9 +5,6 @@ order: 3
 
 <h1 style="font-size: 2.5em;">The right test for you</h1>
 
-
-
-
 <div class="section" style="margin-bottom: 30px;">
     <h2 style="font-size: 1.5em; margin-bottom: 5px;"><strong>A|B testing:</strong></h2>
     <p style="font-size: 1.5em" > Compare different versions of your game to determine the best design choices.</p>
