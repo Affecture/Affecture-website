@@ -3,6 +3,7 @@ import Container from "@components/containers/container.astro";
 import FullScreen from "@components/containers/fullscreen.astro";
 import FullWidth from "@components/containers/fullwidth.astro";
 import Navigation from "@components/navigation.astro";
+import WhatWeDo from "@components/whatwedo.astro";
 import FeatureGallery from "@components/feature/gallery.astro";
 import HighlightText from "@components/typography/highlight.astro";
 import Html from "@layouts/html.astro";
@@ -39,84 +40,7 @@ import OfferingGallery from "@components/offering/gallery.astro";
     What we do
   </h1>
   <section class="px-8 md:px-20">
-    <style>
-      .list-none {
-        list-style-type: none; /* Remove default bullet points */
-        padding: 0;
-      }
-
-      .item {
-        margin-bottom: 40px; /* Adjust the vertical spacing here */
-      }
-
-      .headline-1,
-      .headline-2,
-      .headline-3,
-      .headline-4 {
-        font-size: 2rem; /* Adjust font size as needed */
-      }
-
-      .item strong {
-        display: block; /* Display headings as blocks for consistent spacing */
-        color: #8508fb; /* Apply the custom color */
-        margin-bottom: 10px; /* Adjust spacing between heading and text */
-      }
-
-      .item p {
-        font-size: 1.5rem; /* Adjust the font size of paragraph text */
-        text-align: justify; /* Align paragraph text */
-      }
-
-      .column {
-        flex: 1; /* Equal width for both columns */
-        margin-right: 100px; /* Adjust horizontal space between columns */
-        max-width: 600px; /* Adjust the maximum width to control line length */
-        text-align: justify; /* Align text horizontally */
-      }
-
-      .column:last-child {
-        margin-right: 0; /* Remove margin-right for the last column */
-      }
-    </style>
-
-    <div class="flex justify-center">
-      <div class="column max-w-xs">
-        <ul class="list-none">
-          <li class="item">
-            <strong class="headline-1">Validate your vision:</strong>
-            <p>
-              Our biometric insights help you better understand players'
-              behavior and make informed design choices.
-            </p>
-          </li>
-          <li class="item">
-            <strong class="headline-2">Confident design decisions:</strong>
-            <p>
-              Biometric research helps you make confident design choices based
-              on player behavior insights.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="column max-w-xs">
-        <ul class="list-none">
-          <li class="item">
-            <strong class="headline-3">De-risk and reduce rework:</strong>
-            <p>
-              Our studies help de-risk game development by identifying
-              challenges early and minimizing unnecessary work.
-            </p>
-          </li>
-          <li class="item">
-            <strong class="headline-4">More engaging games:</strong>
-            <p>
-              Our biometric insights help ensure that your creative vision
-              aligns with the real player experience.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <WhatWeDo />
   </section>
 </Container>
 
