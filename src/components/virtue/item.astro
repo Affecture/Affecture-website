@@ -7,11 +7,13 @@ interface Props {
 const { data } = Astro.props.virtue;
 ---
 
-<article class="flex flex-col p-4 md:p-8 justify-around">
+<article class="flex flex-col p-4 md:p-8 justify-after">
   <header class="text-center p-2">
     <h1 class="text-3xl font-bold">{data.title}</h1>
   </header>
-  <section class="self-center">
-    {data.details.map((d) => <p class="mb-4">{d}</p>)}
+  <section class="self-center prose prose-invert">
+    <ul>
+      {data.details.map((d) => <li>{d}</li>)}
+    </ul>
   </section>
 </article>
