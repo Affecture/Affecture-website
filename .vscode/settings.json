@@ -6,5 +6,6 @@
     "biosignals",
     "Multimodal",
     "playtesting"
-  ]
+  ],
+  "editor.formatOnSave": true
 }
