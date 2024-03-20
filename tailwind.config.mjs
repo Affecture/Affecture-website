@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -10,7 +11,10 @@ export default {
         pink: "#d026e1",
         complementary: "#f3d3a0",
       },
+      fontFamily: {
+        sans: ["Space Grotesk Variable", ...defaultTheme.fontFamily.sans],
+      },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
