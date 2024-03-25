@@ -1,11 +1,10 @@
 ---
-title: Onboarding and Alignment
+title: Onboarding
 order: 1
 ---
 
 First, we align on:
 
-- Game to be tested
 - Game vision
 - Research goals
 - Player demographic

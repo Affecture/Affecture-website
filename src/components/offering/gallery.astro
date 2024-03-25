@@ -5,7 +5,7 @@ import Item from "@components/offering/item.astro";
 const offerings = await getCollection("offering");
 ---
 
-<section class="grid md:grid-cols-3 gap-2 md:gap-4 p-2">
+<section class="grid grid-row-3 lg:grid-cols-3 gap-2 md:gap-4 p-2">
   {
     offerings
       .sort((a, b) => a.data.order - b.data.order)
