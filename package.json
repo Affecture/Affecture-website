@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/mdx": "^2.2.2",
+    "@astrojs/mdx": "^2.2.4",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/ts-plugin": "^1.6.1",
     "@fontsource-variable/space-grotesk": "^5.0.17",
