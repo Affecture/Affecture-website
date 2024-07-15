@@ -1,0 +1,115 @@
+---
+import { Picture } from "astro:assets";
+import logo from "../assets/logo.png";
+import Button from "./buttons/emptyButton.astro"
+---
+
+<div class="navbar">
+  <nav class="nav-content">
+    <a href={"/"} class="mini-logo">
+      <svg width="48" height="30" viewBox="0 0 48 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_280_1840)">
+        <path d="M47.8805 26.9457V29.4542H34.3724C32.2936 29.4591 30.2511 28.9048 28.4557 27.8485C26.6604 26.7921 25.1772 25.2721 24.1591 23.4451C22.9351 25.2415 21.2917 26.7071 19.3738 27.7129C17.4558 28.7187 15.3219 29.2338 13.16 29.213C6.04328 29.1528 0.202274 23.3367 0.0622104 16.163C0.0515355 15.6096 0.0745442 15.056 0.131107 14.5055C0.179294 14.0212 0.404036 13.5722 0.761812 13.2454C1.11959 12.9186 1.58494 12.7372 2.06776 12.7365H19.6771L18.6762 10.2944C18.273 9.3032 17.5858 8.45564 16.7026 7.85986C15.8193 7.26409 14.78 6.94713 13.7172 6.94944H3.92417C2.89831 6.94944 1.91446 6.53865 1.18907 5.80745C0.463675 5.07625 0.0561523 4.08453 0.0561523 3.05046V0.541196H13.7172C15.7818 0.53668 17.8107 1.08385 19.5972 2.12696C21.3837 3.17007 22.864 4.67185 23.8873 6.47933C25.1153 4.70322 26.7547 3.256 28.6633 2.26322C30.5718 1.27045 32.6919 0.762128 34.8395 0.782356C41.9562 0.842646 47.7965 6.65867 47.9373 13.8324C47.9488 14.3858 47.9263 14.9393 47.8699 15.4899C47.8212 15.9743 47.5961 16.4232 47.2381 16.7499C46.8801 17.0767 46.4147 17.258 45.9317 17.2589H28.4087L29.4096 19.701C29.8131 20.6928 30.5008 21.5408 31.3848 22.1368C32.2688 22.7327 33.3089 23.0495 34.3724 23.0467H44.0148C45.0402 23.0473 46.0235 23.4584 46.7484 24.1895C47.4733 24.9206 47.8805 25.912 47.8805 26.9457Z" fill="url(#paint0_linear_280_1840)"/>
+        </g>
+        <defs>
+        <linearGradient id="paint0_linear_280_1840" x1="0.940443" y1="15.2083" x2="47.6996" y2="14.7877" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6F3CF8"/>
+        <stop offset="0.5" stop-color="#FE2792"/>
+        <stop offset="1" stop-color="#FCAE17"/>
+        </linearGradient>
+        <clipPath id="clip0_280_1840">
+        <rect width="48" height="29" fill="white" transform="translate(0 0.5)"/>
+        </clipPath>
+        </defs>
+        <title>Affecture Logo</title>
+      </svg>
+    </a>
+    <ul class="right-links">
+      <li>
+        <a
+          href={"/"}
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href={"/about"}
+          >About Us</a
+        >
+      </li>
+      <li id="contactButton"><Button
+          title="Contact Us"
+        />
+      </li>
+    </ul>
+  </nav>
+</div>
+<style>
+  .navbar {
+    /* display: flex; */
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0px;
+    background-color: #0f0f0f5a;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .nav-content {
+    padding: 12px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0px;
+    max-width: 100%;
+    display: flex;
+		flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mini-logo {
+    align-self: center;
+    justify-self: center;
+  }
+  .right-links {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+		flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+  }
+  a {
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+  }
+  li {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .mini-logo {
+      display: none;
+    }
+    .right-links {
+      p, a {
+        font-size: 12px;
+        align-self: center;
+      }
+    }
+    
+    .navbar {
+      padding-left: auto;
+      padding-right: var(--padding);
+    }
+
+    .nav-content {
+      justify-content: flex-end;
+    }
+  }
+
+
+</style>

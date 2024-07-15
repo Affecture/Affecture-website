@@ -1,0 +1,361 @@
+---
+import { SMTPClient } from 'emailjs';
+---
+<div class="container">
+	<script
+		slot="htmlHead"
+		is:inline
+		type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+	></script>
+	<li class="link-card">
+			<div id="contactPopUpClose">
+				<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>                
+			</div>
+			<h2>
+				Contact
+			</h2>
+			
+			<div class="divider"></div>
+			<p>
+				General Inquiry
+			</p>
+			<form id="contact-form"
+			data-publickey={"BUcm18z1_1-YvcVsq"}
+			data-template={"template_wp9lial"}
+			style="display:flex; flex-direction: column; gap: 5px;">
+				<div class="formfields">
+					<div class="form-left">
+						<input class="form-input" type="text" id="firstName" name="firstName" placeholder="Full Name*" required>
+						<input class="form-input" type="email" id="email" name="email" placeholder="Email*" required>
+						<input class="form-input" type="text" id="phone" name="phone" placeholder="Phone Number">
+						<input class="form-input" type="text" id="jobTitle" name="jobTitle" placeholder="Job Title">
+						<input class="form-input" type="text" id="companyName" name="companyName" placeholder="Company">
+						<input type="hidden" id="contact_number" name="contact_number"/>
+					</div>
+					<textarea id="message" name="message" placeholder="Message*" required rows="5"></textarea>
+				</div>
+				<div style="display: flex; align-items: center; gap: 20px">
+					<input id="contact-button" class="form-input submit" type="submit" value="Send Message">
+					<div id="popup-loading"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+					<div id="popup-submitted">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 6L9 17L4 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+			</form>
+	</li>
+	<div id="contact-background"></div>
+</div>
+
+<style>
+	.container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		/* background-color: rgba(0, 0, 0, 0.6); */
+		position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 15;
+		color: white;
+	}
+	#contact-background {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		z-index: -1;
+	}
+	#contact-background:hover{
+		cursor: pointer;
+	}
+
+	.link-card {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		padding-top: 18px;
+		padding-bottom: 10px;
+		padding-left: 22px;
+		padding-right: 22px;
+		height: fit-content;
+		border-radius: 20px;
+        background-position: 100%;
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+		border-style: solid;
+		border-width: 0px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(7.8px);
+		-webkit-backdrop-filter: blur(7.8px);
+		background: linear-gradient(rgba(29, 31, 35, 0.5), rgba(29, 31, 35, 0.5)) padding-box,
+              linear-gradient(to bottom right, #6666664a, #00000041) border-box;
+		border: 2px solid transparent;
+		background-color: #1E1E1E;
+        width: 70vw;
+        margin: auto;
+	}
+	h2 {
+		margin: 0;
+		/* font-size: 20px; */
+        font-weight: 600;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 5px;
+        margin-bottom: 15px;
+		font-size: 20px;
+        font-weight: normal;
+
+	}
+	.divider {
+		width: 100%;
+		border: 0.5px solid rgba(255, 255, 255, 0.565);
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+    .form-input{
+		border: 2px solid #BFC0DF;
+		border-radius: 10px;
+		font-size: 18px;
+		padding-left: 20px;
+		padding-right: 20px;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: white;
+		height: 45px;
+	}
+
+	.form-input:hover{
+		border: 2px solid white;
+		color: white;
+	}
+
+	.form-input::placeholder {
+		color: rgb(255, 255, 255);
+		opacity: 0.3;
+	}
+
+	.submit {
+		background-color: rgba(255, 255, 255, 0);
+		height: 100%;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		align-items: center;
+		width: fit-content;
+		margin-top: 20px;
+		margin-bottom: 12px;
+		transition: all 0.3s;
+	}
+
+	.submit:hover {
+		border: 2px solid white;
+		background-color: white;
+		color: black;
+		cursor: pointer;
+	}
+
+    #contactPopUpClose {
+        position: static;
+        left: 18px;
+        top: 15px;
+		width: fit-content;
+    }
+    #contactPopUpClose:hover {
+        opacity: 0.5;
+		cursor: pointer;
+    }
+
+	textarea {
+		resize: none;
+		flex: 4;
+		font-family: "Inter", sans-serif;
+		font-weight: normal;
+		font-size: 18px;
+		padding-top: 12px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border: 2px solid #BFC0DF;
+		border-radius: 10px;
+		font-size: 18px;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: white;
+	}
+
+	textarea:hover{
+		border: 2px solid white;
+	}
+
+	.formfields {
+		display: flex;
+		gap: 10px;
+		height: fit-content;
+	}
+
+	.form-left {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		flex: 1;
+		height: fit-content;
+	}
+
+	#popup-submitted {
+        display: none;
+		background-color: rgb(255, 255, 255);
+		height: 100%;
+        width: 60px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        /* margin-bottom: 10px; */
+		margin-top: 20px;
+		margin-bottom: 12px;
+	}
+
+	#popup-loading {
+		display: none;
+		border: 2px solid #BFC0DF;
+		border-radius: 10px;
+		font-size: 18px;
+		padding-left: 20px;
+		padding-right: 20px;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: white;
+		height: 47px;
+		width: 20px;
+		margin-top: 20px;
+		margin-bottom: 12px;
+	}
+
+
+	.lds-ellipsis,
+	.lds-ellipsis div {
+		box-sizing: border-box;
+	}
+	.lds-ellipsis {
+		display: inline-block;
+		position: relative;
+		width: 80px;
+		height: 80px;
+		scale: 0.5;
+		margin-top: -17px;
+		margin-left: -28px;
+	}
+	.lds-ellipsis div {
+		position: absolute;
+		top: 33.33333px;
+		width: 13.33333px;
+		height: 13.33333px;
+		border-radius: 50%;
+		background: currentColor;
+		animation-timing-function: cubic-bezier(0, 1, 1, 0);
+	}
+	.lds-ellipsis div:nth-child(1) {
+		left: 8px;
+		animation: lds-ellipsis1 0.6s infinite;
+	}
+	.lds-ellipsis div:nth-child(2) {
+		left: 8px;
+		animation: lds-ellipsis2 0.6s infinite;
+	}
+	.lds-ellipsis div:nth-child(3) {
+		left: 32px;
+		animation: lds-ellipsis2 0.6s infinite;
+	}
+	.lds-ellipsis div:nth-child(4) {
+		left: 56px;
+		animation: lds-ellipsis3 0.6s infinite;
+	}
+	@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+	}
+	@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+	}
+	@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(24px, 0);
+	}
+	}
+
+	@media only screen and (max-width: 850px) {
+		.link-card {
+			width: 100%;
+		}
+		#link-card-play {
+			left: 0;
+			margin: 0;
+			width: 100%;
+			max-width: 100%;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.formfields {
+			flex-direction: column;
+		}
+		
+	}
+</style>
+<script type="text/javascript" is:inline>
+
+	// window.onload = function () {
+	  const form = document.getElementById("contact-form");
+	  const check = document.getElementById("popup-submitted");
+	  const loading = document.getElementById("popup-loading");
+
+	  // Setup hooks for sending manually
+	  form.addEventListener('submit', e => {
+		loading.style.display = "block";
+		check.style.display = "none";
+		event.preventDefault();
+		// disableSendButton();
+		// generate a five digit number for the contact_number variable
+		this.contact_number.value = (Math.random() * 100000) | 0;
+		// these IDs from the previous steps
+		emailjs
+		  .sendForm(
+			"default_service",
+			"template_wp9lial",
+			"#contact-form",
+			"BUcm18z1_1-YvcVsq",
+		  )
+		  .then(
+			function () {
+				loading.style.display = "none";
+				check.style.display = "flex";
+			  console.log("Email sent succesfully!");
+			//   show(document.getElementById("success-modal"));
+			//   setTimeout(function () {
+			//     hide(document.getElementById("success-modal"));
+			//   }, 3000);
+			},
+			function (error) {
+				loading.style.display = "none";
+			  console.log("Email failed to send...", error);
+			//   show(document.getElementById("failure-modal"));
+			},
+		  );
+	  });
+	// };
+  </script>

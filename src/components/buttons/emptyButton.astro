@@ -1,0 +1,46 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="button">
+	<p>
+		{title}
+	<p>
+</div>
+<style>
+	.button {
+		padding: 10px;
+		padding-left: 28px;
+		padding-right: 28px;
+		border-radius: 10px;
+		border-width: 2px;
+		border-style: solid;
+		width: fit-content;
+		transition: all 0.3s;
+		background-color: rgba(255, 255, 255, 0);
+	}
+	p {
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0;
+		pointer-events: none;
+		-webkit-user-select: none; 
+		-ms-user-select: none; 
+		user-select: none;
+	}
+	.button:is(:hover, :focus-within) {
+		background-color: white;
+		cursor: pointer;
+	}
+	.button:is(:hover, :focus-within) p {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
