@@ -3,27 +3,20 @@ tagline: The right test for you
 order: 3
 ---
 
-<h1 style="font-size: 2.5em;">The right test for you</h1>
+# The right test for you
 
+## A|B testing:
 
+Compare different versions of your game to determine the best design choices.
 
+## First time user experience:
 
-<div class="section" style="margin-bottom: 30px;">
-    <h2 style="font-size: 1.5em; margin-bottom: 5px;"><strong>A|B testing:</strong></h2>
-    <p style="font-size: 1.5em" > Compare different versions of your game to determine the best design choices.</p>
-</div>
+Evaluate the experience from new users to identify potential friction points.
 
-<div class="section" style="margin-bottom: 30px;">
-    <h2 style="font-size: 1.5em; margin-bottom: 5px;"><strong>First time user experience:</strong></h2>
-    <p style="font-size: 1.5em" >Evaluate the experience from new users to identify potential friction points.</p>
-</div>
+## Competitor testing:
 
-<div class="section" style="margin-bottom: 30px;">
-    <h2 style="font-size: 1.5em; margin-bottom: 5px;"><strong>Competitor testing:</strong></h2>
-    <p style="font-size: 1.5em" >Understand what competitors did right and wrong, to help your development.</p>
-</div>
+Understand what competitors did right and wrong, to help your development.
 
-<div class="section" style="margin-bottom: 30px;">
-    <h2 style="font-size: 1.5em; margin-bottom: 5px;"><strong>Concept tests:</strong></h2>
-    <p style="font-size: 1.5em" >Test and refine your game to shape successful game development from the start.</p>
-</div>
+## Concept tests:
+
+Test and refine your game to shape successful game development from the start.

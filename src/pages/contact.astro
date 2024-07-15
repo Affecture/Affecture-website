@@ -10,6 +10,7 @@ import Highlight from "@components/typography/highlight.astro";
 <Html>
   <script
     slot="htmlHead"
+    is:inline
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
   ></script>
@@ -136,7 +137,7 @@ import Highlight from "@components/typography/highlight.astro";
           > using the "Message" button
         </p>
       </Container>
-      <script type="text/javascript">
+      <script type="text/javascript" is:inline>
         // Disable the contact button for three seconds
         function disableSendButton() {
           document.getElementById("contact-button").disabled = true;

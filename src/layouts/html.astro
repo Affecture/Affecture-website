@@ -1,5 +1,6 @@
 ---
 import config from "@config";
+import "@fontsource-variable/space-grotesk";
 import type { HTMLAttributes } from "astro/types";
 interface Props extends HTMLAttributes<"body"> {
   title?: string;
@@ -13,7 +14,7 @@ const { title, class: className, ...bodyAttributes } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <base href={baseUrl} />
@@ -23,7 +24,7 @@ const { title, class: className, ...bodyAttributes } = Astro.props;
     <slot name="htmlHead" />
   </head>
   <body
-    class="w-screen min-h-screen bg-slate-900 text-white"
+    class="overflow-x-hidden w-screen min-h-screen bg-slate-900 text-white"
     class:list={[className]}
     {...bodyAttributes}
   >

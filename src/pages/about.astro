@@ -1,9 +1,9 @@
 ---
 import Container from "@components/containers/container.astro";
+import VirtueGallery from "@components/virtue/gallery.astro";
 import FullWidth from "@components/containers/fullwidth.astro";
 import Navigation from "@components/navigation.astro";
 import PersonGallery from "@components/person/gallery.astro";
-import VirtueGallery from "@components/virtue/gallery.astro";
 import Html from "@layouts/html.astro";
 ---
 
@@ -13,129 +13,44 @@ import Html from "@layouts/html.astro";
     <h1 class="text-4xl text-center md:text-justify mb-8">Overview</h1>
     <section class="px-8 md:px-20">
       <p class="text-lg mb-8">
-        Affecture was founded in August of 2023 by André (CEO), Andreas
-        (CXO), and Marius (CTO), and is located in Copenhagen, Denmark.
-      </p>
-      
+        Affecture was founded in August of 2023 by André (CEO), Andreas (CXO),
+        and Marius (CTO), and is located in Copenhagen, Denmark.
       </p>
     </section>
   </Container>
-  <FullWidth class="bg-gradient-to-br from-purple via-pink to-orange" id="about">
+
+  <FullWidth
+    class="bg-gradient-to-br from-purple via-pink to-orange mb-12"
+    id="about"
+  >
     <Container class="py-8">
       <h1 class="text-4xl text-center md:text-justify mb-12">Meet our team</h1>
       <PersonGallery />
     </Container>
     <Container class="py-8">
       <p class="text-lg mb-8">
-        Affecture's team also includes studnets and interns in the fields of Cognitive Science, 
-        Data Science, Machine Learning and User Research.
+        Affecture's team also includes studnets and interns in the fields of
+        Cognitive Science, Data Science, Machine Learning and User Research.
       </p>
     </Container>
   </FullWidth>
- 
-  <Container id="features" class="mb-12">
-    <h1 class="text-4xl text-center md:text-justify mb-8" style="text-indent: 1px;">Our purpose</h1>
-    <section class="px-8 md:px-20">
-      <div class="flex justify-left">
-        <div class="column max-w-xs">
-          <style>
-            .item p {
-              font-size: 1.5rem; /* Adjust the font size of paragraph text */
-              text-align: justify; /* Align paragraph text */
-              margin-bottom: 10px; /* Add some space between paragraphs */
-              padding-left: 20px; /* Push text to the right by 20 pixels */
-            }
-          </style>
-          <ul class="list-none">
-            <li class="item">
-              <p>- Affecture aims to help game studios in understanding player experience and improve their product.</p>
-              <p>- We make this possible with our multimodal physiological data analysis toolkit.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-</Container>
 
-
-  </Container>
-  <Container id="features" class="mb-12">
-    <h1 class="text-4xl text-center md:text-justify mb-8" style="text-indent: 1px;">What we do</h1>
-    <section class="px-8 md:px-20">
-      <style>
-        .list-none {
-          list-style-type: none; /* Remove default bullet points */
-          padding: 0;
-        }
-        
-        .item {
-          margin-bottom: 40px; /* Adjust the vertical spacing here */
-        }
-  
-        .headline-1, .headline-2, .headline-3, .headline-4 {
-          font-size: 2.0rem; /* Adjust font size as needed */
-        }
-  
-        .item strong {
-          display: block; /* Display headings as blocks for consistent spacing */
-          color: #8508fb; /* Apply the custom color */
-          margin-bottom: 10px; /* Adjust spacing between heading and text */
-        }
-  
-        .item p {
-          font-size: 1.5rem; /* Adjust the font size of paragraph text */
-          text-align: justify; /* Align paragraph text */
-        }
-  
-        .column {
-          flex: 1; /* Equal width for both columns */
-          margin-right: 100px; /* Adjust horizontal space between columns */
-          max-width: 600px; /* Adjust the maximum width to control line length */
-          text-align: justify; /* Align text horizontally */
-        }
-  
-        .column:last-child {
-          margin-right: 0; /* Remove margin-right for the last column */
-        }
-      </style>
-      
-      <div class="flex justify-center">
-        <div class="column max-w-xs">
-          <ul class="list-none">
-            <li class="item">
-              <strong class="headline-1">Data is our friend:</strong> 
-              <p>- We aim to make data-driven decisions.</p>
-              <p>- Data is essential to our product, and we strive to get the best possible data.</p>
-            </li>
-            <li class="item">
-              <strong class="headline-2">Connecting collaboration:</strong>
-              <p>- We encourage teamwork, knowledge sharing, and feedback.</p>
-              <p> - We want to be honest about problems and expose them as early as possible, so we can tackle them as a team.</p>
-              <p>-Our aim to bring people closer together not only with our product but also in our team. We believe that strong human relationships are essential when solving problems.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="column max-w-xs">
-          <ul class="list-none">
-            <li class="item">
-              <strong class="headline-3">Curiosity:</strong>
-              <p>- We encourage knowledge seeking and constant improvement</p>
-              <p>- Things are correct until they're not. Questioning current ways opens possibilities for change.</p>
-            </li>
-            <li class="item">
-              <strong class="headline-4">Ideas are best served simple</strong>
-              <p>- We are passionate about making the complex elegant.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <Container class="mb-12">
+    <h1 class="text-4xl text-center md:text-justify mb-8">Our purpose</h1>
+    <section class="px-8 md:px-20 prose prose-invert prose-2xl max-w-none">
+      <p>
+        Affecture aims to help game studios in understanding player experience
+        and improve their product.
+      </p>
+      <p>
+        We make this possible with our multimodal physiological data analysis
+        toolkit.
+      </p>
     </section>
   </Container>
-  
 
-
-  <!-- <Container class="mb-12 py-8">
+  <Container class="mb-12 py-8">
     <h1 class="text-4xl text-center md:text-justify mb-8">Our virtues</h1>
     <VirtueGallery />
-  </Container> -->
+  </Container>
 </Html>

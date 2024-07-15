@@ -7,12 +7,12 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
-      "@config": ["src/config.mjs"],
+      "@config": ["src/config.mjs"]
     },
     "plugins": [
       {
-        "name": "@astrojs/ts-plugin",
-      },
-    ],
-  },
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  }
 }
