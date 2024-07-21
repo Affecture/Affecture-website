@@ -1,137 +1,266 @@
 ---
 import { Image } from "astro:assets";
-import Layout from '../layouts/Layout.astro';
-import CardTestamonials from '../components/cards/CardFounders.astro';
-import CardLargeMiniIcon from '../components/cards/CardLargeMiniIcon.astro';
-import Nav from '../components/navigation.astro';
-import Footer from '../components/footer.astro';
+import Layout from "../layouts/Layout.astro";
+import CardTestamonials from "../components/cards/CardFounders.astro";
+import CardLargeMiniIcon from "../components/cards/CardLargeMiniIcon.astro";
+import Nav from "../components/navigation.astro";
+import Footer from "../components/footer.astro";
 import Button from "../components/buttons/emptyButton.astro";
 import DarkButton from "../components/buttons/DarkButton.astro";
 import headerImage from "../assets/DTC_pic.jpg";
-import ContactPopUp from '../components/contact/contactPopUp.astro';
+import ContactPopUp from "../components/contact/contactPopUp.astro";
 ---
 
 <Layout title="Affecture - About Us">
-	<div id="contact-container">
-		<ContactPopUp/>
-	</div>
-	<main>
-		<div style="width:100%; position: fixed; margin: 0px; padding: 0px; top: 0px; z-index:1;">
-			<Nav/>
-		</div>
-		<div class="hero">
-			<div class="heroContent">
-				<Image class="header-image"
-				src={headerImage}
-				alt="Group Photo of Foudners"
-				/>
-			</div>
-		</div>
-		<section class="overview">
-			<div class="textContainer">
-				<h2>About Us</h2>
-				<p style="margin-top: -20px">Affecture was founded in August of 2023 by Andreas (CXO), Marius (CTO), and André (CEO), and is located in Copenhagen, Denmark.</p>	
-				<h2 style="margin-top: 80px;">Our Purpose</h2>
-				<p style="margin-top: -20px">Affecture aims to help game studios in understanding player experience and improve their product. We make this possible with our multimodal physiological data analysis toolkit.</p>	
-			</div>
-		</section>
-		<section class="pillars">
-			<div class="textContainer">
-				<h2>Our Pillars</h2>
-			</div>
-			<ul role="list" class="how-grid">
-				<CardLargeMiniIcon
-					title="Data"
-					body="We aim to make data-driven decisions. Data is essential to our product, and we strive to get the best possible data."
-				>
-				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M35.7893 39.9287V19.9287" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M23.7893 39.9287V7.92871" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M11.7893 39.9287V27.9287" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>					
-				</CardLargeMiniIcon>
-				<CardLargeMiniIcon
-					title="Curiosity"
-					body="We encourage knowledge seeking and constant improvement. Things are correct until they're not. Questioning current ways opens possibilities for change."
-				>
-				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<g clip-path="url(#clip0_181_426)">
-					<path d="M23.6463 34.0918C29.1691 34.0918 33.6463 29.6146 33.6463 24.0918C33.6463 18.5689 29.1691 14.0918 23.6463 14.0918C18.1235 14.0918 13.6463 18.5689 13.6463 24.0918C13.6463 29.6146 18.1235 34.0918 23.6463 34.0918Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M23.6462 2.0918V6.0918" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M23.6462 42.0918V46.0918" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M8.0863 8.53174L10.9263 11.3717" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M36.3663 36.8118L39.2063 39.6518" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M1.6463 24.0918H5.6463" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M41.6462 24.0918H45.6462" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M8.0863 39.6518L10.9263 36.8118" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M36.3663 11.3717L39.2063 8.53174" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					</g>
-					<defs>
-					<clipPath id="clip0_181_426">
-					<rect width="48" height="48" fill="white"/>
-					</clipPath>
-					</defs>
-					</svg>						
-				</CardLargeMiniIcon>
-				<CardLargeMiniIcon
-					title="Collaboration"
-					body="We encourage teamwork, knowledge sharing, and feedback. Our aim to bring people closer together by tackling problems as a team."
-				>		
-				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<g clip-path="url(#clip0_181_438)">
-					<path d="M34.0225 42.4783V38.4783C34.0225 36.3565 33.1796 34.3217 31.6793 32.8214C30.179 31.3211 28.1442 30.4783 26.0225 30.4783H10.0225C7.90073 30.4783 5.8659 31.3211 4.36561 32.8214C2.86532 34.3217 2.02246 36.3565 2.02246 38.4783V42.4783" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M18.0225 22.4783C22.4407 22.4783 26.0225 18.8965 26.0225 14.4783C26.0225 10.06 22.4407 6.47827 18.0225 6.47827C13.6042 6.47827 10.0225 10.06 10.0225 14.4783C10.0225 18.8965 13.6042 22.4783 18.0225 22.4783Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M46.0225 42.4783V38.4783C46.0211 36.7057 45.4312 34.9838 44.3452 33.5829C43.2592 32.182 41.7387 31.1814 40.0225 30.7383" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M32.0225 6.73828C33.7433 7.17888 35.2685 8.17968 36.3577 9.5829C37.4469 10.9861 38.0381 12.7119 38.0381 14.4883C38.0381 16.2646 37.4469 17.9904 36.3577 19.3937C35.2685 20.7969 33.7433 21.7977 32.0225 22.2383" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					</g>
-					<defs>
-					<clipPath id="clip0_181_438">
-					<rect width="48" height="48" fill="white"/>
-					</clipPath>
-					</defs>
-					</svg>							
-				</CardLargeMiniIcon>
-				<CardLargeMiniIcon
-					title="Simplicity"
-					body="We are pationate about making the complex elegant."
-				>		
-				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M24.061 32.2451C28.4793 32.2451 32.061 28.6634 32.061 24.2451C32.061 19.8268 28.4793 16.2451 24.061 16.2451C19.6428 16.2451 16.061 19.8268 16.061 24.2451C16.061 28.6634 19.6428 32.2451 24.061 32.2451Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M2.16101 24.2451H14.061" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M34.0811 24.2451H45.9811" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>									
-				</CardLargeMiniIcon>				
-			</ul>
-		</section>
-		<section class="testimonials">
-			<div class="side-bar-transition"></div>
-			<div class="textContainer">
-				<div class="hyphen"></div>
-				<h2>Meet The Team</h2>
-				<h3>Our Founders</h3>
-			</div>
-			<ul role="list" class="testimonials-grid">
-				<CardTestamonials
-					title="CEO"
-					name="André Castelli"
-					slug="andre"
-					link="https://www.linkedin.com/in/andrecastelli/"
-				></CardTestamonials>
-				<CardTestamonials
-					title="CXO"
-					name="Andreas Houmølle"
-					slug="andreas"
-					link="https://www.linkedin.com/in/andreas-houmoelle/"
-				></CardTestamonials>
-				<CardTestamonials
-					title="CTO"
-					name="Marius Jonika"
-					slug="marius"
-					link="https://www.linkedin.com/in/marius-jonika-637596149/"
-				></CardTestamonials>
-			</ul>
-			<div style="display: flex; gap: 20px;">
-				<!-- <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div id="contact-container">
+    <ContactPopUp />
+  </div>
+  <main>
+    <div
+      style="width:100%; position: fixed; margin: 0px; padding: 0px; top: 0px; z-index:1;"
+    >
+      <Nav />
+    </div>
+    <div class="hero">
+      <div class="heroContent">
+        <Image
+          class="header-image"
+          src={headerImage}
+          alt="Group Photo of Foudners"
+        />
+      </div>
+    </div>
+    <section class="overview">
+      <div class="textContainer">
+        <h2>About Us</h2>
+        <p style="margin-top: -20px">
+          Affecture was founded in August of 2023 by Andreas (CXO), Marius
+          (CTO), and André (CEO), and is located in Copenhagen, Denmark.
+        </p>
+        <h2 style="margin-top: 80px;">Our Purpose</h2>
+        <p style="margin-top: -20px">
+          Affecture aims to help game studios in understanding player experience
+          and improve their product. We make this possible with our multimodal
+          physiological data analysis toolkit.
+        </p>
+      </div>
+    </section>
+    <section class="pillars">
+      <div class="textContainer">
+        <h2>Our Pillars</h2>
+      </div>
+      <ul role="list" class="how-grid">
+        <CardLargeMiniIcon
+          title="Data"
+          body="We aim to make data-driven decisions. Data is essential to our product, and we strive to get the best possible data."
+        >
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M35.7893 39.9287V19.9287"
+              stroke="black"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M23.7893 39.9287V7.92871"
+              stroke="black"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M11.7893 39.9287V27.9287"
+              stroke="black"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </CardLargeMiniIcon>
+        <CardLargeMiniIcon
+          title="Curiosity"
+          body="We encourage knowledge seeking and constant improvement. Things are correct until they're not. Questioning current ways opens possibilities for change."
+        >
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_181_426)">
+              <path
+                d="M23.6463 34.0918C29.1691 34.0918 33.6463 29.6146 33.6463 24.0918C33.6463 18.5689 29.1691 14.0918 23.6463 14.0918C18.1235 14.0918 13.6463 18.5689 13.6463 24.0918C13.6463 29.6146 18.1235 34.0918 23.6463 34.0918Z"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M23.6462 2.0918V6.0918"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M23.6462 42.0918V46.0918"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M8.0863 8.53174L10.9263 11.3717"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M36.3663 36.8118L39.2063 39.6518"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M1.6463 24.0918H5.6463"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M41.6462 24.0918H45.6462"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M8.0863 39.6518L10.9263 36.8118"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M36.3663 11.3717L39.2063 8.53174"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_181_426">
+                <rect width="48" height="48" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </CardLargeMiniIcon>
+        <CardLargeMiniIcon
+          title="Collaboration"
+          body="We encourage teamwork, knowledge sharing, and feedback. Our aim to bring people closer together by tackling problems as a team."
+        >
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_181_438)">
+              <path
+                d="M34.0225 42.4783V38.4783C34.0225 36.3565 33.1796 34.3217 31.6793 32.8214C30.179 31.3211 28.1442 30.4783 26.0225 30.4783H10.0225C7.90073 30.4783 5.8659 31.3211 4.36561 32.8214C2.86532 34.3217 2.02246 36.3565 2.02246 38.4783V42.4783"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M18.0225 22.4783C22.4407 22.4783 26.0225 18.8965 26.0225 14.4783C26.0225 10.06 22.4407 6.47827 18.0225 6.47827C13.6042 6.47827 10.0225 10.06 10.0225 14.4783C10.0225 18.8965 13.6042 22.4783 18.0225 22.4783Z"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M46.0225 42.4783V38.4783C46.0211 36.7057 45.4312 34.9838 44.3452 33.5829C43.2592 32.182 41.7387 31.1814 40.0225 30.7383"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M32.0225 6.73828C33.7433 7.17888 35.2685 8.17968 36.3577 9.5829C37.4469 10.9861 38.0381 12.7119 38.0381 14.4883C38.0381 16.2646 37.4469 17.9904 36.3577 19.3937C35.2685 20.7969 33.7433 21.7977 32.0225 22.2383"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_181_438">
+                <rect width="48" height="48" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </CardLargeMiniIcon>
+        <CardLargeMiniIcon
+          title="Simplicity"
+          body="We are pationate about making the complex elegant."
+        >
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24.061 32.2451C28.4793 32.2451 32.061 28.6634 32.061 24.2451C32.061 19.8268 28.4793 16.2451 24.061 16.2451C19.6428 16.2451 16.061 19.8268 16.061 24.2451C16.061 28.6634 19.6428 32.2451 24.061 32.2451Z"
+              stroke="black"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M2.16101 24.2451H14.061"
+              stroke="black"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M34.0811 24.2451H45.9811"
+              stroke="black"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </CardLargeMiniIcon>
+      </ul>
+    </section>
+    <section class="testimonials">
+      <div class="side-bar-transition"></div>
+      <div class="textContainer">
+        <div class="hyphen"></div>
+        <h2>Meet The Team</h2>
+        <h3>Our Founders</h3>
+      </div>
+      <ul role="list" class="testimonials-grid">
+        <CardTestamonials
+          title="CEO"
+          name="André Castelli"
+          slug="andre"
+          link="https://www.linkedin.com/in/andrecastelli/"
+        />
+        <CardTestamonials
+          title="CXO"
+          name="Andreas Houmølle"
+          slug="andreas"
+          link="https://www.linkedin.com/in/andreas-houmoelle/"
+        />
+        <CardTestamonials
+          title="CTO"
+          name="Marius Jonika"
+          slug="marius"
+          link="https://www.linkedin.com/in/marius-jonika-637596149/"
+        />
+      </ul>
+      <div style="display: flex; gap: 20px;">
+        <!-- <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_181_438)">
 					<path d="M34.0225 42.4783V38.4783C34.0225 36.3565 33.1796 34.3217 31.6793 32.8214C30.179 31.3211 28.1442 30.4783 26.0225 30.4783H10.0225C7.90073 30.4783 5.8659 31.3211 4.36561 32.8214C2.86532 34.3217 2.02246 36.3565 2.02246 38.4783V42.4783" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M18.0225 22.4783C22.4407 22.4783 26.0225 18.8965 26.0225 14.4783C26.0225 10.06 22.4407 6.47827 18.0225 6.47827C13.6042 6.47827 10.0225 10.06 10.0225 14.4783C10.0225 18.8965 13.6042 22.4783 18.0225 22.4783Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -144,188 +273,192 @@ import ContactPopUp from '../components/contact/contactPopUp.astro';
 					</clipPath>
 					</defs>
 					</svg> -->
-					<p style="margin-top: 0px">Affecture's team also includes students and interns working and studying in the fields of Cognitive Science, Data Science, Machine Learning and User Research.</p>	
-			</div>
-		</section>
-		<section class="test-with-us">
-			<div class="textContainer">
-				<div class="hyphen-black"></div>
-				<h2>Get In Touch</h2>
-				<p class="body-text">Want to learn more or find out how Affecture can help you test your game?</p>
-				<DarkButton
-				title="Contact Us"
-				/>	
-			</div>
-		</section>
-		<Footer/>
-	</main>
+        <p style="margin-top: 0px">
+          Affecture's team also includes students and interns working and
+          studying in the fields of Cognitive Science, Data Science, Machine
+          Learning and User Research.
+        </p>
+      </div>
+    </section>
+    <section class="test-with-us">
+      <div class="textContainer">
+        <div class="hyphen-black"></div>
+        <h2>Get In Touch</h2>
+        <p class="body-text">
+          Want to learn more or find out how Affecture can help you test your
+          game?
+        </p>
+        <DarkButton title="Contact Us" />
+      </div>
+    </section>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
-	#contact-container {
-		display: none;
-	}
+  #contact-container {
+    display: none;
+  }
 
-	main {
-		margin: 0px;
-		padding: 0px;
-		width: 100%;
-		max-width: 100%;
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.link-card-grid {
-		display: grid;
-		gap: 120px;
-	}
-	.hero {
-		height: 70vh;
-		width: 100vw;
-	}
-	.heroContent {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+  main {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .link-card-grid {
+    display: grid;
+    gap: 120px;
+  }
+  .hero {
+    height: 70vh;
+    width: 100vw;
+  }
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-	.header-image {
-		margin-top: 75px;
-		width: 100%;
-		height: 70vh;
-		object-fit: cover;
-		object-position: 50% 10%;
-	}
+  .header-image {
+    margin-top: 75px;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: 50% 10%;
+  }
 
-	.overview {
-		display: flex;
-		flex-direction: column;
-		padding: var(--padding);
-		gap: 60px;
-		.textContainer {
-			top: var(--padding);
-			height: fit-content;
-		}
-	}
+  .overview {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    gap: 60px;
+    .textContainer {
+      top: var(--padding);
+      height: fit-content;
+    }
+  }
 
-	.testimonials {
-		display: flex;
-		flex-direction: column;
-		padding: var(--padding);
-		gap: 60px;
-		.textContainer {
-			top: 0;
-			height: fit-content;
-		}
-	}
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    gap: 60px;
+    .textContainer {
+      top: 0;
+      height: fit-content;
+    }
+  }
 
-	.testimonials-grid {
-		max-width: calc(100vw - var(--double-padding));
-		display: flex;
-		gap: 80px;
-		padding: 0px;
-		margin: 0px;
-		margin-top:-40px;
-	}
+  .testimonials-grid {
+    max-width: calc(100vw - var(--double-padding));
+    display: flex;
+    gap: 80px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -40px;
+  }
 
-	.pillars {
-		display: flex;
-		flex-direction: column;
-		padding: var(--padding);
-		gap: 80px;
-		background-color: #F0F0F0;
-		.textContainer {
-			color: black;
-			top: var(--padding);
-			height: fit-content;
-		}
-	}
+  .pillars {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    gap: 80px;
+    background-color: #f0f0f0;
+    .textContainer {
+      color: black;
+      top: var(--padding);
+      height: fit-content;
+    }
+  }
 
-	.how-grid {
-		margin: 0px;
-		padding: 0px;
-		display: flex;
-		flex-direction: column;
-		gap: 50px;
-	}
+  .how-grid {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 
-	.test-with-us {
-		display: flex;
-		padding: var(--padding);
-		padding-top: 80px;
-		gap: 80px;
-		background-color: #F0F0F0;
-		.textContainer {
-			width: 35%;
-			height: fit-content;
-			color: #000;
-			.body-text {
-				margin-top: 100px;
-				margin-bottom: 30px;
-			}
-		}
-	}
+  .test-with-us {
+    display: flex;
+    padding: var(--padding);
+    padding-top: 80px;
+    gap: 80px;
+    background-color: #f0f0f0;
+    .textContainer {
+      width: 35%;
+      height: fit-content;
+      color: #000;
+      .body-text {
+        margin-top: 100px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 
-	@media only screen and (max-width: 850px) {
-		.header-image {
-			margin-top: 100px;
-			height: 60vh;
-		}
-		.testimonials-grid {
-			flex-direction: column;
-			gap: var(--padding);
-			margin-top:-40px;
-			margin-bottom:-20px;
-		}
-		.test-with-us {
-			display: flex;
-			padding: var(--padding);
-			/* padding-top: 0px; */
-			gap: 80px;
-			background-color: #F0F0F0;
-			.textContainer {
-				width: 100%;
-				height: fit-content;
-				color: #000;
-				.body-text {
-					margin-top: 0;
-				}
-			}
-	}
-	}
+  @media only screen and (max-width: 850px) {
+    .header-image {
+      margin-top: 100px;
+      height: 60vh;
+    }
+    .testimonials-grid {
+      flex-direction: column;
+      gap: var(--padding);
+      margin-top: -40px;
+      margin-bottom: -20px;
+    }
+    .test-with-us {
+      display: flex;
+      padding: var(--padding);
+      /* padding-top: 0px; */
+      gap: 80px;
+      background-color: #f0f0f0;
+      .textContainer {
+        width: 100%;
+        height: fit-content;
+        color: #000;
+        .body-text {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 </style>
 
 <script>
+  var y = document.getElementById("contact-container");
 
-	var y = document.getElementById("contact-container");
+  const ctct = document.querySelectorAll(".button");
+  ctct.forEach((button) => {
+    button.addEventListener("click", () => {
+      // console.log("Hello, on client");
+      y.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
 
-	const ctct = document.querySelectorAll(".button");
-	ctct.forEach((button) => {
-		button.addEventListener("click", () => {
-			// console.log("Hello, on client");
-			y.style.display = "flex";
-			document.body.style.overflow = "hidden";
-		});
-	});
+  const ctctClose = document.querySelector("#contactPopUpClose");
+  ctctClose.addEventListener("click", () => {
+    // console.log("Hello, on client");
+    y.style.display = "none";
+    document.body.style.overflow = "scroll";
+  });
 
-	const ctctClose = document.querySelector("#contactPopUpClose");
-	ctctClose.addEventListener("click", () => {
-		// console.log("Hello, on client");
-		y.style.display = "none";
-		document.body.style.overflow = "scroll";
-	});
-
-	const ctctClose2 = document.querySelector("#contact-background");
-	ctctClose2.addEventListener("click", () => {
-		// console.log("Hello, on client");
-		y.style.display = "none";
-		document.body.style.overflow = "scroll";
-	});
+  const ctctClose2 = document.querySelector("#contact-background");
+  ctctClose2.addEventListener("click", () => {
+    // console.log("Hello, on client");
+    y.style.display = "none";
+    document.body.style.overflow = "scroll";
+  });
 </script>
