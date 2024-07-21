@@ -3,7 +3,7 @@ import config from "./src/config.mjs";
 const { url } = config;
 import dynamicImport from "vite-plugin-dynamic-import";
 import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,5 +16,5 @@ export default defineConfig({
   vite: {
     plugins: [dynamicImport],
   },
-  integrations: [mdx(), tailwind()],
+  integrations: [mdx(), react()],
 });

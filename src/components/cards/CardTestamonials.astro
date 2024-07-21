@@ -1,0 +1,76 @@
+---
+interface Props {
+	author: string;
+	body: string;
+}
+
+const { author, body } = Astro.props;
+---
+
+<li class="link-card">
+		<slot />
+		<!-- <svg width="180" height="32" viewBox="0 0 200 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M16.0001 2.6665L20.1201 11.0132L29.3334 12.3598L22.6667 18.8532L24.2401 28.0265L16.0001 23.6932L7.76008 28.0265L9.33341 18.8532L2.66675 12.3598L11.8801 11.0132L16.0001 2.6665Z" fill="white"/>
+			<path d="M58.0001 2.6665L62.1201 11.0132L71.3334 12.3598L64.6667 18.8532L66.2401 28.0265L58.0001 23.6932L49.7601 28.0265L51.3334 18.8532L44.6667 12.3598L53.8801 11.0132L58.0001 2.6665Z" fill="white"/>
+			<path d="M100 2.6665L104.12 11.0132L113.333 12.3598L106.667 18.8532L108.24 28.0265L100 23.6932L91.7601 28.0265L93.3334 18.8532L86.6667 12.3598L95.8801 11.0132L100 2.6665Z" fill="white"/>
+			<path d="M142 2.6665L146.12 11.0132L155.333 12.3598L148.667 18.8532L150.24 28.0265L142 23.6932L133.76 28.0265L135.333 18.8532L128.667 12.3598L137.88 11.0132L142 2.6665Z" fill="white"/>
+			<path d="M184 2.6665L188.12 11.0132L197.333 12.3598L190.667 18.8532L192.24 28.0265L184 23.6932L175.76 28.0265L177.333 18.8532L170.667 12.3598L179.88 11.0132L184 2.6665Z" fill="white"/>
+		</svg> -->
+		<p class="bodyText">
+			{body}
+		</p>
+		<p class="author">
+			{author}
+		</p>
+		
+</li>
+<style>
+	.link-card {
+		max-width: 40%;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding-top: 35px;
+		padding-bottom: 25px;
+		padding-left: 40px;
+		padding-right: 40px;
+		/* background-color: #23262d; */
+		background-image: none;
+		background-size: 400%;
+		border-radius: 20px;
+		background-position: 100%;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(7.8px);
+		-webkit-backdrop-filter: blur(7.8px);
+		background: linear-gradient(rgba(29, 31, 35, 0.5), rgba(29, 31, 35, 0.5)) padding-box,
+              linear-gradient(to bottom right, #6666664a, #00000041) border-box;
+		border: 2px solid transparent;
+	}
+	h3 {
+		margin: 0;
+		margin-top: 2rem;
+		font-size: 28px;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 1rem;
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+	.bodyText {
+		/* margin-top:2rem; */
+	}
+	.author {
+		opacity: 60%;
+		font-weight: 300;
+		margin-bottom: 1rem;
+	}
+
+	@media only screen and (max-width: 850px) {
+		.link-card {
+			max-width: 100%;
+		}
+	}
+
+</style>
