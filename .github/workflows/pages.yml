@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 20.4.0
           cache: "npm"
-      - run: npm ci
+      - run: npm ci --force
       - run: npm run build
       - name: Upload website
         uses: actions/upload-artifact@v3
