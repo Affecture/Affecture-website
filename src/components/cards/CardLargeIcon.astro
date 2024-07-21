@@ -1,0 +1,84 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<li class="link-card">
+  <div class="text-content">
+    <h3>
+      {title}
+    </h3>
+    <p>
+      {body}
+    </p>
+  </div>
+  <slot />
+  <!-- <svg fill="none" height="200" viewBox="0 0 48 48" width="200" xmlns="http://www.w3.org/2000/svg"><g stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="m44 22.16v1.84c-.0025 4.3128-1.399 8.5094-3.9813 11.9637-2.5824 3.4543-6.2121 5.9813-10.348 7.2041-4.1358 1.2228-8.5562 1.076-12.6018-.4186-4.0455-1.4947-7.49959-4.257-9.84698-7.8751-2.34739-3.618-3.46234-7.898-3.17857-12.2015s1.95106-8.3999 4.75321-11.6785c2.80214-3.27846 6.58904-5.56333 10.79584-6.5138 4.2068-.95048 8.6081-.51562 12.5476 1.2397"/><path d="m44 8-20 20.02-6-6"/></g></svg> -->
+</li>
+<style>
+  .link-card {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 120px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-image: none;
+    border-radius: 19px;
+    background-position: 100%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border-style: solid;
+    border-width: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    background:
+      linear-gradient(rgba(29, 31, 35, 0.5), rgba(29, 31, 35, 0.5)) padding-box,
+      linear-gradient(to bottom right, #6666664a, #00000041) border-box;
+    border: 2px solid transparent;
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h3 {
+    margin: 0;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+  svg {
+    min-width: 200px;
+    align-self: center;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .link-card {
+      flex-direction: column;
+      gap: 40px;
+      /* width: 100%; */
+    }
+    .text-content {
+      gap: 40px;
+      justify-content: flex-start;
+    }
+    svg {
+      max-width: 100px;
+      align-self: center;
+    }
+    p {
+      margin-right: 0px;
+    }
+  }
+</style>
