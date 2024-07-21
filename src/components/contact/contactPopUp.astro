@@ -1,5 +1,5 @@
 ---
-import { SMTPClient } from "emailjs";
+
 ---
 
 <div class="container">
@@ -397,7 +397,7 @@ import { SMTPClient } from "emailjs";
   form.addEventListener("submit", (e) => {
     loading.style.display = "block";
     check.style.display = "none";
-    event.preventDefault();
+    e.preventDefault();
     // disableSendButton();
     // generate a five digit number for the contact_number variable
     this.contact_number.value = (Math.random() * 100000) | 0;

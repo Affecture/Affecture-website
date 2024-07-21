@@ -7,7 +7,6 @@ import headerImage from "../assets/affecture[blankBackgroug].png";
 import learnImage from "../assets/pitchPhoto.jpg";
 import Layout from "../layouts/Layout.astro";
 import BasicCard from "../components/cards/CardBasic.astro";
-import CardTestamonials from "../components/cards/CardTestamonials.astro";
 import CardLargeIcon from "../components/cards/CardLargeIcon.astro";
 import CardNoIcon from "../components/cards/CardNoIcon.astro";
 import CardPlainIcon from "../components/cards/CardPlainIcon.astro";
@@ -18,7 +17,6 @@ import Footer from "../components/footer.astro";
 import Button from "../components/buttons/emptyButton.astro";
 import DarkButton from "../components/buttons/DarkButton.astro";
 import bgImage from "../assets/background.png";
-const optimizedBg = await getImage({ src: bgImage, format: "webp" });
 ---
 
 <Layout title="Affecture">
@@ -1437,8 +1435,8 @@ const optimizedBg = await getImage({ src: bgImage, format: "webp" });
     e.preventDefault();
     let requestBody = new FormData(form);
     fetch(scriptURL, { method: "POST", body: requestBody })
-      .then((response) => {
-        // alert('Success!', response)
+      .then((_response) => {
+        // alert('Success!', _response)
         form.style.display = "none";
         submittedButton.style.display = "flex";
       })
