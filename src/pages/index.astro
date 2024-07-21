@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import { Picture } from "astro:assets";
-import { getImage } from "astro:assets";
 import MovingGradient from "../components/gradient";
 import headerImage from "../assets/affecture[blankBackgroug].png";
 import learnImage from "../assets/pitchPhoto.jpg";
@@ -16,7 +15,6 @@ import Nav from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
 import Button from "../components/buttons/emptyButton.astro";
 import DarkButton from "../components/buttons/DarkButton.astro";
-import bgImage from "../assets/background.png";
 ---
 
 <Layout title="Affecture">
@@ -1366,7 +1364,7 @@ import bgImage from "../assets/background.png";
       x.classList.toggle("fade");
     }, 2000);
     const header = document.getElementById("heroContent");
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (scrollTop > 600) {
       header.style.display = "none";
     } else {
@@ -1407,7 +1405,7 @@ import bgImage from "../assets/background.png";
 
   window.addEventListener("scroll", function () {
     const header = document.getElementById("heroContent");
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
     let num = 1 - scrollTop / 400;
     let scale = 1 - scrollTop / 4000;
     // console.log(scrollTop);
@@ -1421,10 +1419,14 @@ import bgImage from "../assets/background.png";
     // header.style.top = "-200";
   });
 
-  const form = document.querySelector("#playtest-form");
-  const submitButton = document.querySelector("#playtest-submit");
-  const loadButton = document.querySelector("#loading");
-  const submittedButton = document.querySelector("#submitted");
+  const form = document.querySelector("#playtest-form") as HTMLFormElement;
+  const submitButton = document.querySelector(
+    "#playtest-submit",
+  ) as HTMLButtonElement;
+  const loadButton = document.querySelector("#loading") as HTMLButtonElement;
+  const submittedButton = document.querySelector(
+    "#submitted",
+  ) as HTMLButtonElement;
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbykLTkfztLiGo4S0EaetCsiimdOlilZiP19ZjDwUN865hLAN4QmeMF28OKodlQ4lFPzxQ/exec";
 
@@ -1441,7 +1443,7 @@ import bgImage from "../assets/background.png";
         submittedButton.style.display = "flex";
       })
       .catch((error) => {
-        alert("Error!", error.message);
+        alert("Error!" + error.message);
         submitButton.disabled = false;
         form.style.display = "flex";
         submittedButton.style.display = "none";

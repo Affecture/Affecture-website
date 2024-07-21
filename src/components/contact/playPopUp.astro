@@ -291,10 +291,18 @@ const { title, body } = Astro.props;
   }
 </style>
 <script>
-  const form = document.querySelector("#playtest-popup-form");
-  const submitButton = document.querySelector("#playtest-popup-submit");
-  const loadButton = document.querySelector("#popup-loading");
-  const submittedButton = document.querySelector("#popup-submitted");
+  const form = document.querySelector(
+    "#playtest-popup-form",
+  ) as HTMLFormElement;
+  const submitButton = document.querySelector(
+    "#playtest-popup-submit",
+  ) as HTMLButtonElement;
+  const loadButton = document.querySelector(
+    "#popup-loading",
+  ) as HTMLButtonElement;
+  const submittedButton = document.querySelector(
+    "#popup-submitted",
+  ) as HTMLButtonElement;
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbwWeKdvWciQRqE4xUEqQO39Rfa7R3bUMKB4JBucsshHwAy0LWXrhRGEi-LrUP9iAwN1/exec";
 
@@ -305,7 +313,7 @@ const { title, body } = Astro.props;
     e.preventDefault();
     let requestBody = new FormData(form);
     fetch(scriptURL, { method: "POST", body: requestBody })
-      .then((response) => {
+      .then((_response) => {
         // alert('Success!', response)
         form.style.display = "none";
         submittedButton.style.display = "flex";
@@ -315,7 +323,7 @@ const { title, body } = Astro.props;
         }, 3000);
       })
       .catch((error) => {
-        alert("Error!", error.message);
+        alert("Error!" + error.message);
         submitButton.disabled = false;
         form.style.display = "flex";
         submittedButton.style.display = "none";
