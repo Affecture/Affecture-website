@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.5",
+    "@astrojs/mdx": "^3.1.6",
     "@astrojs/react": "^3.6.2",
     "@astrojs/ts-plugin": "^1.10.2",
     "@react-spring/three": "^9.7.4",
