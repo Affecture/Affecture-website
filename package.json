@@ -23,7 +23,7 @@
     "@astrojs/react": "^3.6.2",
     "@astrojs/ts-plugin": "^1.10.2",
     "@react-spring/three": "^9.7.4",
-    "@react-three/fiber": "^8.17.7",
+    "@react-three/fiber": "^8.17.8",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.2.23",
     "@types/three": "^0.150.0",
