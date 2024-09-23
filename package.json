@@ -24,7 +24,7 @@
     "@astrojs/ts-plugin": "^1.10.2",
     "@react-spring/three": "^9.7.4",
     "@react-three/fiber": "^8.17.7",
-    "@types/react": "^18.3.6",
+    "@types/react": "^18.3.8",
     "@types/react-dom": "^18.2.23",
     "@types/three": "^0.150.0",
     "astro": "^4.15.4",
