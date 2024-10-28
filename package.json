@@ -21,7 +21,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^3.1.8",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/ts-plugin": "^1.10.2",
+    "@astrojs/ts-plugin": "^1.10.4",
     "@react-spring/three": "^9.7.5",
     "@react-three/fiber": "^8.17.10",
     "@types/react": "^18.3.11",
