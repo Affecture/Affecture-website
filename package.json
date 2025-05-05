@@ -27,7 +27,7 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.3",
     "@types/three": "^0.170.0",
-    "astro": "^5.5.4",
+    "astro": "^5.7.10",
     "emailjs": "^4.0.3",
     "framer-motion": "^12.6.3",
     "react": "^19.0.0",
