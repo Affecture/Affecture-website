@@ -25,7 +25,7 @@
     "@react-spring/three": "^9.7.5",
     "@react-three/fiber": "^9.1.2",
     "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "@types/three": "^0.176.0",
     "astro": "^5.7.12",
     "emailjs": "^4.0.3",
