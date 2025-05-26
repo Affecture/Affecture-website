@@ -20,7 +20,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.2.6",
-    "@astrojs/react": "^4.2.7",
+    "@astrojs/react": "^4.3.0",
     "@astrojs/ts-plugin": "^1.10.4",
     "@react-spring/three": "^10.0.0",
     "@react-three/fiber": "^9.1.2",
