@@ -3,12 +3,6 @@
 ---
 
 <div class="container">
-  <script
-    slot="htmlHead"
-    is:inline
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-  ></script>
   <li class="link-card">
     <div id="contactPopUpClose">
       <svg
@@ -35,91 +29,17 @@
     <h2>Contact</h2>
 
     <div class="divider"></div>
-    <p>General Inquiry</p>
-    <form
-      id="contact-form"
-      data-publickey={"BUcm18z1_1-YvcVsq"}
-      data-template={"template_wp9lial"}
-      style="display:flex; flex-direction: column; gap: 5px;"
-    >
-      <div class="formfields">
-        <div class="form-left">
-          <input
-            class="form-input"
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="Full Name*"
-            required
-          />
-          <input
-            class="form-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email*"
-            required
-          />
-          <input
-            class="form-input"
-            type="text"
-            id="phone"
-            name="phone"
-            placeholder="Phone Number"
-          />
-          <input
-            class="form-input"
-            type="text"
-            id="jobTitle"
-            name="jobTitle"
-            placeholder="Job Title"
-          />
-          <input
-            class="form-input"
-            type="text"
-            id="companyName"
-            name="companyName"
-            placeholder="Company"
-          />
-          <input type="hidden" id="contact_number" name="contact_number" />
-        </div>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Message*"
-          required
-          rows="5"></textarea>
-      </div>
-      <div style="display: flex; align-items: center; gap: 20px">
-        <input
-          id="contact-button"
-          class="form-input submit"
-          type="submit"
-          value="Send Message"
-        />
-        <div id="popup-loading">
-          <div class="lds-ellipsis">
-            <div></div><div></div><div></div><div></div>
-          </div>
-        </div>
-        <div id="popup-submitted">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 6L9 17L4 12"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
-        </div>
-      </div>
-    </form>
+    <p style="font-size:18px; padding:16px 0; text-align:center; color:#ddd">
+      For inquiries, please contact us kindly via LinkedIn:<br />
+      <a
+        href="https://www.linkedin.com/company/affecture"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="color:#71aaff; text-decoration:underline; font-weight:bold;"
+      >
+        https://www.linkedin.com/company/affecture
+      </a>
+    </p>
   </li>
   <div id="contact-background"></div>
 </div>
@@ -387,44 +307,3 @@
     }
   }
 </style>
-<script type="text/javascript" is:inline>
-  // window.onload = function () {
-  const form = document.getElementById("contact-form");
-  const check = document.getElementById("popup-submitted");
-  const loading = document.getElementById("popup-loading");
-
-  // Setup hooks for sending manually
-  form.addEventListener("submit", (e) => {
-    loading.style.display = "block";
-    check.style.display = "none";
-    e.preventDefault();
-    // disableSendButton();
-    // generate a five digit number for the contact_number variable
-    this.contact_number.value = (Math.random() * 100000) | 0;
-    // these IDs from the previous steps
-    emailjs
-      .sendForm(
-        "default_service",
-        "template_wp9lial",
-        "#contact-form",
-        "BUcm18z1_1-YvcVsq",
-      )
-      .then(
-        function () {
-          loading.style.display = "none";
-          check.style.display = "flex";
-          console.log("Email sent succesfully!");
-          //   show(document.getElementById("success-modal"));
-          //   setTimeout(function () {
-          //     hide(document.getElementById("success-modal"));
-          //   }, 3000);
-        },
-        function (error) {
-          loading.style.display = "none";
-          console.log("Email failed to send...", error);
-          //   show(document.getElementById("failure-modal"));
-        },
-      );
-  });
-  // };
-</script>
